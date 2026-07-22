@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "title": {
+      "default": "S&PA | MEP Contracting"
+    },
+    "description": {
+      "default": "S&PA designs, supplies, installs and maintains electro-mechanical works — MEP contracting, facility management, and ICT & infrastructure across Egypt."
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "sectors": "Our Projects",
+    "partners": "Partners",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "footer": {
+    "about": "S&PA was founded in 2014 to deliver quality MEP contracting, facility management, and ICT infrastructure — with customer satisfaction at the core.",
+    "links": "Navigation",
+    "contact": "Contact",
+    "newsletter": "Start a Project",
+    "emailPlaceholder": "Enter your email address",
+    "subscribeBtn": "Send",
+    "rights": "All Rights Reserved. S&PA",
+    "developedBy": "Designed by ZDS Media Agency",
+    "address": "136 Othman Ibn Afan St. Military Academy, Heliopolis, Cairo, Egypt",
+    "fax": "Fax"
+  }
+}

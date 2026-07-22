@@ -1,0 +1,50 @@
+---
+description: SPA Corp coding style — lean Next.js profile site
+alwaysApply: true
+---
+
+# SPA Corp — Coding Style
+
+**Project type:** Corporate profile (NOT e-commerce). Keep structure lean — no unused wrappers.
+
+## Folder layout
+
+```
+src/
+├── app/[locale]/page.tsx      # Composes home sections
+├── components/
+│   ├── about/                 # WhoWeAre (counters inline)
+│   ├── home/                  # Hero, Services, Why, WhyCards, Sectors, IsoBanner, Partners
+│   ├── layout/header|footer/
+│   └── ui/                    # Button, Reveal, Section, HeaderSection, CountUp
+├── i18n/
+├── lib/api/ + lib/data/ + theme.ts + motion.ts
+└── styles/globals.css
+messages/{ar,en}/
+```
+
+## Data flow
+
+```
+lib/data/*.json → lib/api/*.ts → home|about/*.tsx (fetch + compose)
+```
+
+No thin wrapper files. One section file does fetch + render when possible.
+
+## When to split a file
+
+Prefer **one file per section**. Split only when:
+
+1. File would exceed ~100–150 lines, **or**
+2. You need a clear `"use client"` boundary (motion/interaction) while the parent stays a Server Component
+
+Example: `Why.tsx` (server fetch) + `WhyCards.tsx` (client cards) is fine.  
+Do **not** extract tiny pieces like `CounterCard.tsx` / `ServiceCard.tsx` into their own files — keep them as local functions in the section.
+
+## Rules
+
+- Server Components by default; `"use client"` only for motion, theme toggle, scroll/menu
+- Shared UI in `components/ui/` — never invent parallel systems
+- Do not add empty folders (`store/`, `providers/`, `actions/`) until needed
+- Theme init = inline script in layout; toggle logic in `lib/theme.ts`
+- No ThemeProvider / ThemeScript components

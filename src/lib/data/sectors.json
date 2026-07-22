@@ -1,0 +1,10 @@
+[
+  { "icon": "Landmark", "titleKey": "banks", "descKey": "banksDesc" },
+  { "icon": "Radio", "titleKey": "telecom", "descKey": "telecomDesc" },
+  { "icon": "Wallet", "titleKey": "fintech", "descKey": "fintechDesc" },
+  { "icon": "Server", "titleKey": "datacenters", "descKey": "datacentersDesc" },
+  { "icon": "Building2", "titleKey": "ministries", "descKey": "ministriesDesc" },
+  { "icon": "Plane", "titleKey": "airports", "descKey": "airportsDesc" },
+  { "icon": "GraduationCap", "titleKey": "schools", "descKey": "schoolsDesc" },
+  { "icon": "Hotel", "titleKey": "hotels", "descKey": "hotelsDesc" }
+]

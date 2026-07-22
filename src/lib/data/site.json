@@ -1,0 +1,24 @@
+{
+  "branding": {
+    "name": "S&PA",
+    "logo": "/img/logo.png"
+  },
+  "contact": {
+    "phone": "(+202) 277 44 303 / 04",
+    "fax": "(+202) 277 44 261",
+    "email": "info@spacorp-eg.com"
+  },
+  "social": [
+    { "name": "Facebook", "href": "#" },
+    { "name": "Linkedin", "href": "#" },
+    { "name": "Twitter", "href": "#" },
+    { "name": "Instagram", "href": "#" }
+  ],
+  "media": {
+    "heroVideo": "/img/SPA-Mansoura.mp4",
+    "whoWeAreImage": "/img/who-we-are.png",
+    "teamBannerImage": "/img/team.webp",
+    "isoBannerImage": "/img/team.webp",
+    "servicesPattern": "/img/pattern.png"
+  }
+}

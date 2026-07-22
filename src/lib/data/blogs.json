@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "date": { "en": "July 10, 2025", "ar": "١٠ يوليو ٢٠٢٥" },
+    "readTime": { "en": "5 min read", "ar": "٥ دقائق" },
+    "category": { "en": "Fire Safety", "ar": "سلامة الحريق" },
+    "title": {
+      "en": "Understanding NFPA 13: A Guide to Sprinkler System Design Standards",
+      "ar": "فهم معيار NFPA 13: دليلك لمعايير تصميم أنظمة الرشاشات"
+    },
+    "excerpt": {
+      "en": "A deep dive into the latest NFPA 13 requirements for automatic sprinkler systems in commercial and industrial buildings across Egypt.",
+      "ar": "نظرة معمّقة على أحدث اشتراطات معيار NFPA 13 لأنظمة الرشاشات الأوتوماتيكية في المباني التجارية والصناعية في مصر."
+    },
+    "href": "/articles/nfpa-13-guide",
+    "image": "/img/article-fire-safety.png"
+  },
+  {
+    "id": 2,
+    "date": { "en": "June 22, 2025", "ar": "٢٢ يونيو ٢٠٢٥" },
+    "readTime": { "en": "7 min read", "ar": "٧ دقائق" },
+    "category": { "en": "Engineering", "ar": "هندسة إنشائية" },
+    "title": {
+      "en": "Structural Steel vs. Reinforced Concrete: Choosing the Right System",
+      "ar": "الهيكل الصلب مقابل الخرسانة المسلحة: كيف تختار الأنسب لمشروعك؟"
+    },
+    "excerpt": {
+      "en": "Our structural engineers break down the key differences, costs, and ideal use cases for both construction systems to help you make informed decisions.",
+      "ar": "يشرح مهندسونا الإنشائيون الفروق الجوهرية والتكاليف وحالات الاستخدام المثلى لكلا النظامين لمساعدتك على اتخاذ القرار الصحيح."
+    },
+    "href": "/articles/steel-vs-concrete",
+    "image": "/img/article-engineering.png"
+  },
+  {
+    "id": 3,
+    "date": { "en": "May 15, 2025", "ar": "١٥ مايو ٢٠٢٥" },
+    "readTime": { "en": "4 min read", "ar": "٤ دقائق" },
+    "category": { "en": "Compliance", "ar": "الاعتمادات الحكومية" },
+    "title": {
+      "en": "Civil Defense Compliance in Egypt: What Every Developer Needs to Know",
+      "ar": "الامتثال لاشتراطات الدفاع المدني في مصر: ما يجب على كل مطور معرفته"
+    },
+    "excerpt": {
+      "en": "Navigate the complexities of Egyptian civil defense approvals, from initial design to final certification, with our comprehensive compliance checklist.",
+      "ar": "تعامل مع تعقيدات موافقات الدفاع المدني المصري، من التصميم الأولي حتى الشهادة النهائية، مع قائمة مراجعة الامتثال الشاملة."
+    },
+    "href": "/articles/civil-defense-compliance",
+    "image": "/img/article-compliance.png"
+  },
+  {
+    "id": 4,
+    "date": { "en": "April 8, 2025", "ar": "٨ أبريل ٢٠٢٥" },
+    "readTime": { "en": "6 min read", "ar": "٦ دقائق" },
+    "category": { "en": "MEP Systems", "ar": "أنظمة ميكانيكا" },
+    "title": {
+      "en": "HVAC Design for Large Commercial Projects: Key Considerations",
+      "ar": "تصميم أنظمة التكييف للمشاريع التجارية الكبرى: أهم الاعتبارات"
+    },
+    "excerpt": {
+      "en": "Learn how proper HVAC planning improves energy efficiency, occupant comfort, and long-term operational costs in commercial developments.",
+      "ar": "تعرّف على كيفية تحسين كفاءة الطاقة وراحة المستخدمين وتقليل تكاليف التشغيل من خلال التخطيط السليم لأنظمة التكييف."
+    },
+    "href": "/articles/hvac-commercial-design",
+    "image": "/img/article-engineering.png"
+  }
+]

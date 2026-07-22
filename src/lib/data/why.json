@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "textValKey": "metric1Val",
+    "titleKey": "metric1Title",
+    "descKey": "metric1Desc",
+    "rawNumber": 0,
+    "icon": "ShieldCheck",
+    "isHighlight": true
+  },
+  {
+    "id": 2,
+    "titleKey": "metric2Title",
+    "descKey": "metric2Desc",
+    "rawNumber": 12,
+    "suffix": "+",
+    "icon": "Award"
+  },
+  {
+    "id": 3,
+    "textValKey": "metric3Val",
+    "titleKey": "metric3Title",
+    "descKey": "metric3Desc",
+    "rawNumber": 0,
+    "icon": "CheckSquare"
+  },
+  {
+    "id": 4,
+    "textValKey": "metric4Val",
+    "titleKey": "metric4Title",
+    "descKey": "metric4Desc",
+    "rawNumber": 0,
+    "icon": "Users"
+  },
+  {
+    "id": 5,
+    "textValKey": "metric5Val",
+    "titleKey": "metric5Title",
+    "descKey": "metric5Desc",
+    "rawNumber": 0,
+    "icon": "FileCheck"
+  },
+  {
+    "id": 6,
+    "titleKey": "metric6Title",
+    "descKey": "metric6Desc",
+    "rawNumber": 0,
+    "isCta": true
+  }
+]

@@ -1,0 +1,111 @@
+{
+  "hero": {
+    "scrollDown": "Scroll Down"
+  },
+  "whoWeAre": {
+    "title": "Know About S&PA",
+    "headerStart": "Know About",
+    "headerAccent1": "S&PA",
+    "headerMid": "",
+    "headerAccent2": "",
+    "text": "S&PA was founded in 2014 by experienced and talented engineers in the passive fire protection industry. With a commitment to all aspects of quality, our main objective is customer satisfaction. We only provide products recognized worldwide — delivering clear advantages on every project.",
+    "readMore": "Explore More",
+    "yearsExp": "Years of Experience",
+    "sectorsCount": "Sectors Covered",
+    "isoCerts": "ISO Certifications",
+    "partnersCount": "Trusted Partners"
+  },
+  "services": {
+    "title": "Our Services",
+    "header": "Scope of Work",
+    "subtitle": "We design, supply, install and maintain electro-mechanical activities across the following services.",
+    "service1Title": "MEP Contracting",
+    "service1Desc": "We stay updated with the latest methods and techniques in electro-mechanical contracting.",
+    "service2Title": "Facility Management",
+    "service2Desc": "We provide the services needed to manage vital places where people work, live, and achieve their goals.",
+    "service3Title": "ICT & Infrastructure",
+    "service3Desc": "Full-fledged ICT and telecom contracting — end-to-end digital infrastructure delivery.",
+    "service4Title": "Professional Maintenance",
+    "service4Desc": "Our purpose is to lead facility management by enhancing services, relationships, and profitability.",
+    "viewAll": "Explore More",
+    "readMore": "Explore More"
+  },
+  "whyChooseUs": {
+    "title": "Our Philosophy",
+    "header": "Focus, dedication, innovation, and quality in every project.",
+    "subtitle": "We always aim to meet the client’s needs within budget — with certified quality systems and globally recognized products.",
+    "metric1Title": "Quality First",
+    "metric1Val": "S&PA",
+    "metric1Desc": "All focus, dedication, innovation, and quality placed into each project we deliver.",
+    "metric2Title": "Years of Experience",
+    "metric2Desc": "Founded in 2014 by engineers specialized in passive fire protection and MEP excellence.",
+    "metric3Title": "Within Budget",
+    "metric3Val": "On Target",
+    "metric3Desc": "We always aim to meet the client’s needs within budget requirements.",
+    "metric4Title": "Customer Satisfaction",
+    "metric4Val": "Priority",
+    "metric4Desc": "Our main objective is customer satisfaction across design, supply, install, and maintain.",
+    "metric5Title": "ISO Certified",
+    "metric5Val": "9001 / 14001 / 45001",
+    "metric5Desc": "Internationally recognised standards for quality, environment, and occupational health & safety.",
+    "metric6Title": "Explore Company Profile",
+    "metric6Desc": "Learn more about S&PA qualifications, certifications, and project approach."
+  },
+  "sectors": {
+    "title": "Our Work",
+    "header": "Sectors We Cover",
+    "banks": "Banks",
+    "banksDesc": "Secure MEP and infrastructure solutions for banking facilities.",
+    "telecom": "Telecom",
+    "telecomDesc": "ICT and telecom contracting for resilient networks.",
+    "fintech": "Fintech",
+    "fintechDesc": "Reliable systems for modern financial technology environments.",
+    "datacenters": "Datacenters & Infrastructure",
+    "datacentersDesc": "Mission-critical power, cooling, and digital infrastructure.",
+    "ministries": "Ministries & Organizations",
+    "ministriesDesc": "Public-sector facilities managed with certified quality standards.",
+    "airports": "Airports",
+    "airportsDesc": "Complex electro-mechanical works for aviation environments.",
+    "schools": "Schools & Clubs",
+    "schoolsDesc": "Safe, efficient systems for education and community spaces.",
+    "hotels": "Hotels & Resorts",
+    "hotelsDesc": "Comfort-focused MEP and facility solutions for hospitality."
+  },
+  "iso": {
+    "title": "Certifications",
+    "header": "We Got ISO for You",
+    "description": "We proudly announce ISO 9001, 14001 & 45001 certifications — internationally recognised standards that ensure we meet client needs through an effective quality management system.",
+    "iso9001": "ISO 9001",
+    "iso9001Desc": "Quality Management",
+    "iso14001": "ISO 14001",
+    "iso14001Desc": "Environmental Management",
+    "iso45001": "ISO 45001",
+    "iso45001Desc": "Occupational Health & Safety"
+  },
+  "partners": {
+    "title": "Our Partners",
+    "header": "Your Success, Our Reputation",
+    "description": "We work with globally recognized brands to deliver reliable products and lasting project results."
+  },
+  "teamBanner": {
+    "title": "Our Team",
+    "header": "The Minds Driving Engineering & Safety Excellence",
+    "description": "Our team comprises elite, certified engineers and specialists working together to design, install, and support complex MEP and safety configurations.",
+    "btn": "Meet Our Team"
+  },
+  "projects": {
+    "title": "Project Categories",
+    "header": "Our Diversified Engineering Portfolio",
+    "catContracting": "MEP Contracting",
+    "catContractingDesc": "Discover our electro-mechanical contracting works across commercial and infrastructure developments.",
+    "catFire": "Facility Management",
+    "catFireDesc": "Browse facility management and maintenance projects for critical workplaces and living spaces.",
+    "viewCategory": "View Gallery"
+  },
+  "articles": {
+    "title": "Insights & Updates",
+    "header": "Latest from Our Experts",
+    "viewAll": "View All Articles",
+    "readMore": "Read Article"
+  }
+}

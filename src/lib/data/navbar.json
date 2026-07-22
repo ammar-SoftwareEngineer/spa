@@ -1,0 +1,16 @@
+{
+  "navItems": [
+    { "key": "home", "href": "/" },
+    { "key": "about", "href": "/#about" },
+    { "key": "services", "href": "/#services" },
+    { "key": "sectors", "href": "/#sectors" },
+    { "key": "partners", "href": "/#partners" },
+    { "key": "contact", "href": "/#contact" }
+  ],
+  "footerQuickLinks": [
+    { "key": "about", "href": "#about" },
+    { "key": "services", "href": "#services" },
+    { "key": "sectors", "href": "#sectors" },
+    { "key": "contact", "href": "#contact" }
+  ]
+}

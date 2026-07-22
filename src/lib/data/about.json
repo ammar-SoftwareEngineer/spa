@@ -1,0 +1,6 @@
+[
+  { "value": 12, "suffix": "+", "key": "yearsExp", "icon": "Award" },
+  { "value": 8, "suffix": "", "key": "sectorsCount", "icon": "Building2" },
+  { "value": 3, "suffix": "", "key": "isoCerts", "icon": "FileCheck" },
+  { "value": 28, "suffix": "+", "key": "partnersCount", "icon": "Users" }
+]

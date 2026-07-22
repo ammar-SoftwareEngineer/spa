@@ -1,0 +1,36 @@
+import type { AbstractIntlMessages } from "next-intl";
+
+const loaders = {
+  ar: {
+    common: () => import("../../messages/ar/common.json"),
+    home: () => import("../../messages/ar/home.json"),
+  },
+  en: {
+    common: () => import("../../messages/en/common.json"),
+    home: () => import("../../messages/en/home.json"),
+  },
+} as const;
+
+type AppLocale = keyof typeof loaders;
+type ModuleName = keyof (typeof loaders)["ar"];
+
+const loadOrder: ModuleName[] = ["common", "home"];
+
+export async function loadMessages(
+  locale: string
+): Promise<AbstractIntlMessages> {
+  const lng: AppLocale = locale === "en" ? "en" : "ar";
+  const bundle = loaders[lng];
+  const merged: Record<string, unknown> = {};
+
+  for (const name of loadOrder) {
+    const { default: data } = await bundle[name]();
+    if (name === "common") {
+      Object.assign(merged, data);
+    } else {
+      merged[name] = data;
+    }
+  }
+
+  return merged as AbstractIntlMessages;
+}

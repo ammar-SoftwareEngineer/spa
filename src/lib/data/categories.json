@@ -1,0 +1,16 @@
+[
+  {
+    "badgeKey": "service1Title",
+    "titleKey": "catContracting",
+    "descKey": "catContractingDesc",
+    "image": "/img/proj-contracting.png",
+    "link": "#projects-contracting"
+  },
+  {
+    "badgeKey": "service2Title",
+    "titleKey": "catFire",
+    "descKey": "catFireDesc",
+    "image": "/img/proj-firefighting.png",
+    "link": "#projects-firefighting"
+  }
+]
