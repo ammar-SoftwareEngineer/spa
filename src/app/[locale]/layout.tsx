@@ -41,17 +41,12 @@ export async function generateMetadata({
   return {
     title: t("title.default"),
     description: t("description.default"),
-    icons: {
-      icon: [{ url: "/img/logo.png", type: "image/png" }],
-      shortcut: "/img/logo.png",
-      apple: "/img/logo.png",
-    },
     openGraph: {
       images: [
         {
           url: "/img/logo.png",
-          width: 1200,
-          height: 630,
+          width: 933,
+          height: 381,
           alt: "S&PA Logo",
         },
       ],
