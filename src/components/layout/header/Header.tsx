@@ -138,31 +138,6 @@ export default function Header({ navItems, logoSrc }: HeaderProps) {
           ))}
         </ul>
 
-        <div className="mt-12 flex gap-4">
-          <button
-            type="button"
-            onClick={() => {
-              setTheme(switchTheme());
-              setIsMobileMenuOpen(false);
-            }}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-transparent text-text-primary"
-            aria-label="Toggle Theme"
-          >
-            {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
-          </button>
-
-          <button
-            type="button"
-            onClick={() => {
-              switchLocale();
-              setIsMobileMenuOpen(false);
-            }}
-            className="flex h-10 items-center gap-1.5 rounded-full border border-border px-3 font-semibold text-text-primary"
-          >
-            <Globe size={18} />
-            <span>{locale === "ar" ? "English" : "العربية"}</span>
-          </button>
-        </div>
       </div>
     </>
   );
