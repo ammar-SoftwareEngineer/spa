@@ -1,0 +1,66 @@
+[
+  {
+    "slug": "mansoura-commercial",
+    "titleKey": "project1Title",
+    "descKey": "project1Desc",
+    "locationKey": "project1Location",
+    "image": "/img/proj-contracting.png",
+    "serviceSlugs": ["mep-contracting", "professional-maintenance"]
+  },
+  {
+    "slug": "heliopolis-tower",
+    "titleKey": "project2Title",
+    "descKey": "project2Desc",
+    "locationKey": "project2Location",
+    "image": "/img/breadcrumb/hero.jpg",
+    "serviceSlugs": ["mep-contracting", "facility-management", "ict-infrastructure"]
+  },
+  {
+    "slug": "cairo-datacenter",
+    "titleKey": "project3Title",
+    "descKey": "project3Desc",
+    "locationKey": "project3Location",
+    "image": "/img/breadcrumb/bc-3.jpg",
+    "serviceSlugs": ["ict-infrastructure", "professional-maintenance", "mep-contracting"]
+  },
+  {
+    "slug": "new-admin-capital",
+    "titleKey": "project4Title",
+    "descKey": "project4Desc",
+    "locationKey": "project4Location",
+    "image": "/img/who-we-are.png",
+    "serviceSlugs": ["facility-management", "professional-maintenance"]
+  },
+  {
+    "slug": "airport-facility",
+    "titleKey": "project5Title",
+    "descKey": "project5Desc",
+    "locationKey": "project5Location",
+    "image": "/img/proj-firefighting.png",
+    "serviceSlugs": ["mep-contracting", "facility-management", "professional-maintenance"]
+  },
+  {
+    "slug": "bank-hq-fitout",
+    "titleKey": "project6Title",
+    "descKey": "project6Desc",
+    "locationKey": "project6Location",
+    "image": "/img/about/mission-2.jpg",
+    "serviceSlugs": ["ict-infrastructure", "mep-contracting"]
+  },
+  {
+    "slug": "hospital-complex",
+    "titleKey": "project7Title",
+    "descKey": "project7Desc",
+    "locationKey": "project7Location",
+    "image": "/img/breadcrumb/bc-5.jpg",
+    "serviceSlugs": ["facility-management", "mep-contracting", "professional-maintenance"]
+  },
+  {
+    "slug": "telecom-hub",
+    "titleKey": "project8Title",
+    "descKey": "project8Desc",
+    "locationKey": "project8Location",
+    "image": "/img/breadcrumb/bc-4.jpg",
+    "serviceSlugs": ["ict-infrastructure", "professional-maintenance"]
+  }
+]

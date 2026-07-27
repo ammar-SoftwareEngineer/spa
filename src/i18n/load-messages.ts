@@ -7,6 +7,7 @@ const loaders = {
     about: () => import("../../messages/ar/about.json"),
     team: () => import("../../messages/ar/team.json"),
     contact: () => import("../../messages/ar/contact.json"),
+    services: () => import("../../messages/ar/services.json"),
   },
   en: {
     common: () => import("../../messages/en/common.json"),
@@ -14,13 +15,14 @@ const loaders = {
     about: () => import("../../messages/en/about.json"),
     team: () => import("../../messages/en/team.json"),
     contact: () => import("../../messages/en/contact.json"),
+    services: () => import("../../messages/en/services.json"),
   },
 } as const;
 
 type AppLocale = keyof typeof loaders;
 type ModuleName = keyof (typeof loaders)["ar"];
 
-const loadOrder: ModuleName[] = ["common", "home", "about", "team", "contact"];
+const loadOrder: ModuleName[] = ["common", "home", "about", "team", "contact", "services"];
 
 export async function loadMessages(
   locale: string

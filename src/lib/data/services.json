@@ -1,6 +1,38 @@
 [
-  { "icon": "Building", "titleKey": "service1Title", "descKey": "service1Desc" },
-  { "icon": "Wrench", "titleKey": "service2Title", "descKey": "service2Desc" },
-  { "icon": "Network", "titleKey": "service3Title", "descKey": "service3Desc" },
-  { "icon": "ShieldCheck", "titleKey": "service4Title", "descKey": "service4Desc" }
+  {
+    "slug": "mep-contracting",
+    "icon": "Building",
+    "titleKey": "mepTitle",
+    "descKey": "mepDesc",
+    "detailKey": "mepDetail",
+    "image": "/img/proj-contracting.png",
+    "featureKeys": ["mepFeature1", "mepFeature2", "mepFeature3"]
+  },
+  {
+    "slug": "facility-management",
+    "icon": "Wrench",
+    "titleKey": "facilityTitle",
+    "descKey": "facilityDesc",
+    "detailKey": "facilityDetail",
+    "image": "/img/proj-firefighting.png",
+    "featureKeys": ["facilityFeature1", "facilityFeature2", "facilityFeature3"]
+  },
+  {
+    "slug": "ict-infrastructure",
+    "icon": "Network",
+    "titleKey": "ictTitle",
+    "descKey": "ictDesc",
+    "detailKey": "ictDetail",
+    "image": "/img/breadcrumb/bc-3.jpg",
+    "featureKeys": ["ictFeature1", "ictFeature2", "ictFeature3"]
+  },
+  {
+    "slug": "professional-maintenance",
+    "icon": "ShieldCheck",
+    "titleKey": "maintenanceTitle",
+    "descKey": "maintenanceDesc",
+    "detailKey": "maintenanceDetail",
+    "image": "/img/about/mission.jpg",
+    "featureKeys": ["maintenanceFeature1", "maintenanceFeature2", "maintenanceFeature3"]
+  }
 ]

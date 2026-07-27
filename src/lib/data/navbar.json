@@ -9,7 +9,7 @@
         { "key": "meetOurTeam", "href": "/team" }
       ]
     },
-    { "key": "services", "href": "/#services" },
+    { "key": "services", "href": "/services" },
     { "key": "projects", "href": "/#projects" },
     { "key": "products", "href": "/#products" },
     { "key": "partners", "href": "/#partners" },
@@ -18,7 +18,7 @@
   "footerQuickLinks": [
     { "key": "whoWeAre", "href": "/about" },
     { "key": "meetOurTeam", "href": "/team" },
-    { "key": "services", "href": "/#services" },
+    { "key": "services", "href": "/services" },
     { "key": "projects", "href": "/#projects" },
     { "key": "partners", "href": "/#partners" },
     { "key": "contact", "href": "/contact" }

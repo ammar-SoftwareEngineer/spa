@@ -37,9 +37,22 @@ export type SiteData = {
 };
 
 export type ServiceItem = {
+  slug: string;
   icon: string;
   titleKey: string;
   descKey: string;
+  detailKey: string;
+  image: string;
+  featureKeys: string[];
+};
+
+export type ProjectItem = {
+  slug: string;
+  titleKey: string;
+  descKey: string;
+  locationKey: string;
+  image: string;
+  serviceSlugs: string[];
 };
 
 export type CategoryItem = {
