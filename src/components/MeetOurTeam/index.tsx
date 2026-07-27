@@ -19,7 +19,7 @@ export default async function MeetOurTeamPage() {
         title={t("hero.title")}
         description={t("hero.description")}
         currentLabel={tNav("meetOurTeam")}
-        backgroundImage={site.media.teamBannerImage}
+        backgroundImage={site.media.whoWeAreImage}
         backgroundAlt={t("hero.title")}
       />
       <TeamIntroSection />

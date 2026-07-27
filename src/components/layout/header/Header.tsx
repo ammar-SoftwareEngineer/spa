@@ -110,7 +110,7 @@ export default function Header({ navItems, logoSrc }: HeaderProps) {
                 >
                   <button
                     type="button"
-                    className={`relative flex items-center gap-1.5 py-2 text-[0.95rem] font-medium transition-all after:absolute after:bottom-0 after:start-0 after:h-0.5 after:w-full after:bg-brand after:transition-transform after:duration-300 ${
+                    className={`relative flex items-center gap-1 py-2 text-[0.95rem] font-medium transition-all after:absolute after:bottom-0 after:start-0 after:h-0.5 after:w-full after:bg-brand after:transition-transform after:duration-300 cursor-pointer ${
                       isOpen || isChildActive(item)
                         ? "text-brand opacity-100 after:scale-x-100"
                         : "text-text-primary opacity-80 after:origin-end after:scale-x-0 hover:text-brand hover:opacity-100 hover:after:origin-start hover:after:scale-x-100"
@@ -121,28 +121,28 @@ export default function Header({ navItems, logoSrc }: HeaderProps) {
                     {t(item.key)}
                     <ChevronDown
                       size={14}
-                      className={`transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+                      className={`transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
                     />
                   </button>
 
                   <div
-                    className={`absolute start-0 top-full pt-3 transition-[opacity,transform] duration-200 ${
+                    className={`absolute start-0 top-full z-50 pt-2 transition-opacity duration-200 ${
                       isOpen
-                        ? "pointer-events-auto translate-y-0 opacity-100"
-                        : "pointer-events-none -translate-y-1 opacity-0"
+                        ? "pointer-events-auto opacity-100"
+                        : "pointer-events-none opacity-0"
                     }`}
                   >
-                    <ul className="min-w-[220px] list-none rounded-2xl border border-border bg-bg-primary/95 p-2 shadow-[var(--card-shadow)] backdrop-blur-md">
+                    <ul className="min-w-[200px] list-none rounded-[18px] border border-border bg-bg-primary py-2 shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
                       {item.children!.map((child) => {
                         const active = pathname === child.href;
                         return (
                           <li key={child.key}>
                             <Link
                               href={child.href}
-                              className={`block rounded-xl px-4 py-3 text-[0.92rem] font-medium transition-colors ${
+                              className={`relative mx-3 block whitespace-nowrap py-2.5 text-[0.9rem] font-medium transition-all after:absolute after:bottom-0 after:start-0 after:h-0.5 after:w-full after:bg-brand after:transition-transform after:duration-300 ${
                                 active
-                                  ? "bg-brand/12 text-brand"
-                                  : "text-text-primary hover:bg-bg-secondary hover:text-brand"
+                                  ? "text-brand after:scale-x-100"
+                                  : "text-text-primary after:origin-end after:scale-x-0 hover:text-brand hover:after:origin-start hover:after:scale-x-100"
                               }`}
                             >
                               {t(child.key)}
@@ -219,7 +219,7 @@ export default function Header({ navItems, logoSrc }: HeaderProps) {
             }
 
             return (
-              <li key={item.key} className="flex w-full flex-col items-center gap-3">
+              <li key={item.key} className="flex w-full flex-col items-center gap-2">
                 <button
                   type="button"
                   onClick={() =>
@@ -230,28 +230,26 @@ export default function Header({ navItems, logoSrc }: HeaderProps) {
                 >
                   {t(item.key)}
                   <ChevronDown
-                    size={20}
-                    className={`transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+                    size={18}
+                    className={`transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
                   />
                 </button>
 
-                <ul
-                  className={`flex list-none flex-col items-center gap-3 overflow-hidden transition-all duration-300 ${
-                    isOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
-                  }`}
-                >
-                  {item.children!.map((child) => (
-                    <li key={child.key}>
-                      <Link
-                        href={child.href}
-                        className="text-[1.15rem] font-semibold text-text-secondary transition-colors hover:text-brand"
-                        onClick={closeMobileMenu}
-                      >
-                        {t(child.key)}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+                {isOpen ? (
+                  <ul className="flex list-none flex-col items-center gap-1">
+                    {item.children!.map((child) => (
+                      <li key={child.key}>
+                        <Link
+                          href={child.href}
+                          className="relative block py-2 text-[1.05rem] text-text-secondary transition-all after:absolute after:bottom-0 after:start-0 after:h-0.5 after:w-full after:origin-end after:scale-x-0 after:bg-brand after:transition-transform after:duration-300 hover:text-brand hover:after:origin-start hover:after:scale-x-100"
+                          onClick={closeMobileMenu}
+                        >
+                          {t(child.key)}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
               </li>
             );
           })}
