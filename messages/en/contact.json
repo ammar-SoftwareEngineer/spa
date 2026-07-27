@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "title": "Contact Us | S&PA",
+    "description": "Get in touch with S&PA for MEP contracting, facility management, and ICT infrastructure projects across Egypt."
+  },
+  "hero": {
+    "eyebrow": "Get In Touch",
+    "title": "Contact Us",
+    "description": "Tell us about your project — our team is ready to support design, supply, install, and maintain requirements."
+  },
+  "info": {
+    "eyebrow": "Reach Us",
+    "title": "We're here to help",
+    "description": "Connect with our office in Heliopolis, Cairo, or send a message and we'll get back to you shortly.",
+    "addressTitle": "Address",
+    "phoneTitle": "Phone",
+    "faxTitle": "Fax",
+    "emailTitle": "Email"
+  },
+  "form": {
+    "eyebrow": "Send a Message",
+    "title": "Start a conversation",
+    "description": "Share a few details and our team will respond as soon as possible.",
+    "name": "Full Name",
+    "namePlaceholder": "Enter your full name",
+    "email": "Email Address",
+    "emailPlaceholder": "Enter your email address",
+    "phone": "Phone Number",
+    "phonePlaceholder": "Enter your phone number",
+    "subject": "Subject",
+    "subjectPlaceholder": "How can we help?",
+    "message": "Message",
+    "messagePlaceholder": "Tell us more about your project...",
+    "submit": "Send Message"
+  },
+  "map": {
+    "eyebrow": "Visit Us",
+    "title": "Our Office Location",
+    "description": "136 Othman Ibn Afan St. Military Academy, Heliopolis, Cairo, Egypt"
+  }
+}

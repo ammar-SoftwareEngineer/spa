@@ -31,6 +31,7 @@ export type SiteData = {
     visionImage: string;
     teamBannerImage: string;
     isoBannerImage: string;
+    pageHeroImage: string;
     servicesPattern: string;
   };
 };

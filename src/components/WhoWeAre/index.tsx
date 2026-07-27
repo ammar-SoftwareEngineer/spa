@@ -5,13 +5,11 @@ import CountersSection from "@/components/WhoWeAre/CountersSection";
 import MissionSection from "@/components/WhoWeAre/MissionSection";
 import VisionSection from "@/components/WhoWeAre/VisionSection";
 import WhatWeDoSection from "@/components/WhoWeAre/WhatWeDoSection";
-import { getSiteData } from "@/lib/api/site";
 
 export default async function WhoWeArePage() {
-  const [t, tNav, site] = await Promise.all([
+  const [t, tNav] = await Promise.all([
     getTranslations("about"),
     getTranslations("nav"),
-    getSiteData(),
   ]);
 
   return (
@@ -21,8 +19,6 @@ export default async function WhoWeArePage() {
         title={t("hero.title")}
         description={t("hero.description")}
         currentLabel={tNav("whoWeAre")}
-        backgroundImage={site.media.whoWeAreImage}
-        backgroundAlt={t("hero.title")}
       />
       <AboutSection />
       <CountersSection />

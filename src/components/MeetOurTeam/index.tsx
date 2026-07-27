@@ -3,13 +3,11 @@ import PageHero from "@/components/ui/PageHero";
 import TeamIntroSection from "@/components/MeetOurTeam/TeamIntroSection";
 import BoardSection from "@/components/MeetOurTeam/BoardSection";
 import OurTeamSection from "@/components/MeetOurTeam/OurTeamSection";
-import { getSiteData } from "@/lib/api/site";
 
 export default async function MeetOurTeamPage() {
-  const [t, tNav, site] = await Promise.all([
+  const [t, tNav] = await Promise.all([
     getTranslations("team"),
     getTranslations("nav"),
-    getSiteData(),
   ]);
 
   return (
@@ -19,8 +17,6 @@ export default async function MeetOurTeamPage() {
         title={t("hero.title")}
         description={t("hero.description")}
         currentLabel={tNav("meetOurTeam")}
-        backgroundImage={site.media.whoWeAreImage}
-        backgroundAlt={t("hero.title")}
       />
       <TeamIntroSection />
       <BoardSection />

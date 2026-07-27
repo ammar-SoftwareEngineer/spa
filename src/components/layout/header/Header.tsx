@@ -58,6 +58,17 @@ export default function Header({ navItems, logoSrc }: HeaderProps) {
     item.children?.some((child) => pathname === child.href || pathname.startsWith(`${child.href}/`)) ??
     false;
 
+  const isLight = theme === "light";
+  const isHome = pathname === "/";
+  const useWhiteLinks = isLight && !isScrolled && !isHome;
+
+  const navLinkBase =
+    "relative py-2 text-[0.95rem] font-medium transition-all after:absolute after:bottom-0 after:start-0 after:h-0.5 after:w-full after:bg-brand after:transition-transform after:duration-300";
+  const navLinkIdle = useWhiteLinks
+    ? "text-white opacity-90 after:origin-end after:scale-x-0 hover:text-brand hover:opacity-100 hover:after:origin-start hover:after:scale-x-100"
+    : "text-text-primary opacity-80 after:origin-end after:scale-x-0 hover:text-brand hover:opacity-100 hover:after:origin-start hover:after:scale-x-100";
+  const navLinkActive = "text-brand opacity-100 after:scale-x-100";
+
   return (
     <>
       <header
@@ -91,10 +102,7 @@ export default function Header({ navItems, logoSrc }: HeaderProps) {
               if (!hasChildren) {
                 return (
                   <li key={item.key}>
-                    <Link
-                      href={item.href}
-                      className="relative py-2 text-[0.95rem] font-medium text-text-primary opacity-80 transition-all hover:text-brand hover:opacity-100 after:absolute after:bottom-0 after:start-0 after:h-0.5 after:w-full after:origin-end after:scale-x-0 after:bg-brand after:transition-transform after:duration-300 hover:after:origin-start hover:after:scale-x-100"
-                    >
+                    <Link href={item.href} className={`${navLinkBase} ${navLinkIdle}`}>
                       {t(item.key)}
                     </Link>
                   </li>
@@ -110,10 +118,8 @@ export default function Header({ navItems, logoSrc }: HeaderProps) {
                 >
                   <button
                     type="button"
-                    className={`relative flex items-center gap-1 py-2 text-[0.95rem] font-medium transition-all after:absolute after:bottom-0 after:start-0 after:h-0.5 after:w-full after:bg-brand after:transition-transform after:duration-300 cursor-pointer ${
-                      isOpen || isChildActive(item)
-                        ? "text-brand opacity-100 after:scale-x-100"
-                        : "text-text-primary opacity-80 after:origin-end after:scale-x-0 hover:text-brand hover:opacity-100 hover:after:origin-start hover:after:scale-x-100"
+                    className={`${navLinkBase} flex cursor-pointer items-center gap-1 ${
+                      isOpen || isChildActive(item) ? navLinkActive : navLinkIdle
                     }`}
                     aria-expanded={isOpen}
                     aria-haspopup="true"
@@ -132,7 +138,7 @@ export default function Header({ navItems, logoSrc }: HeaderProps) {
                         : "pointer-events-none opacity-0"
                     }`}
                   >
-                    <ul className="min-w-[200px] grid gap-2 list-none rounded-[18px] border border-border bg-bg-primary py-2 shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
+                    <ul className="grid min-w-[200px] list-none gap-2 rounded-[18px] border border-border bg-bg-primary py-2 shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
                       {item.children!.map((child) => {
                         const active = pathname === child.href;
                         return (
@@ -161,7 +167,7 @@ export default function Header({ navItems, logoSrc }: HeaderProps) {
             <button
               type="button"
               onClick={() => setTheme(switchTheme())}
-              className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-border bg-transparent text-text-primary transition-all hover:scale-105 hover:bg-text-primary hover:text-bg-primary"
+              className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-white bg-transparent text-text-primary transition-all hover:scale-105 hover:bg-text-primary hover:text-bg-primary"
               aria-label="Toggle Theme"
               title={theme === "light" ? "Dark Mode" : "Light Mode"}
             >
@@ -171,7 +177,7 @@ export default function Header({ navItems, logoSrc }: HeaderProps) {
             <button
               type="button"
               onClick={switchLocale}
-              className="flex h-10 cursor-pointer items-center justify-center gap-1.5 rounded-full border border-border bg-transparent px-3 text-[0.85rem] font-semibold text-text-primary transition-all hover:scale-105 hover:bg-text-primary hover:text-bg-primary"
+              className="flex h-10 cursor-pointer items-center justify-center gap-1.5 rounded-full border border-white bg-transparent px-3 text-[0.85rem] font-semibold text-text-primary transition-all hover:scale-105 hover:bg-text-primary hover:text-bg-primary"
               aria-label="Toggle Language"
             >
               <Globe size={16} />

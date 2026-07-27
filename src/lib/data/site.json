@@ -21,6 +21,7 @@
     "visionImage": "/img/proj-contracting.png",
     "teamBannerImage": "/img/team.webp",
     "isoBannerImage": "/img/team/man-banner.jpg",
+    "pageHeroImage": "/img/breadcrumb/hero.jpg",
     "servicesPattern": "/img/pattern.png"
   }
 }

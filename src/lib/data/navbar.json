@@ -13,7 +13,7 @@
     { "key": "projects", "href": "/#projects" },
     { "key": "products", "href": "/#products" },
     { "key": "partners", "href": "/#partners" },
-    { "key": "contact", "href": "/#contact" }
+    { "key": "contact", "href": "/contact" }
   ],
   "footerQuickLinks": [
     { "key": "whoWeAre", "href": "/about" },
@@ -21,6 +21,6 @@
     { "key": "services", "href": "/#services" },
     { "key": "projects", "href": "/#projects" },
     { "key": "partners", "href": "/#partners" },
-    { "key": "contact", "href": "/#contact" }
+    { "key": "contact", "href": "/contact" }
   ]
 }
