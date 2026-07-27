@@ -22,12 +22,7 @@ export default async function ServicesPageView() {
       />
 
       <Section className="overflow-x-clip py-20 md:py-28">
-        <HeaderSection
-          subtitle={t("list.eyebrow")}
-          title={t("list.title")}
-          description={t("list.description")}
-          className="mb-12 md:mb-16"
-        />
+    
 
         <div className="grid grid-cols-12 gap-6 md:gap-7">
           {services.map((service, index) => (
