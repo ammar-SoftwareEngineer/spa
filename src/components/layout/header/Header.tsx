@@ -132,7 +132,7 @@ export default function Header({ navItems, logoSrc }: HeaderProps) {
                         : "pointer-events-none opacity-0"
                     }`}
                   >
-                    <ul className="min-w-[200px] list-none rounded-[18px] border border-border bg-bg-primary py-2 shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
+                    <ul className="min-w-[200px] grid gap-2 list-none rounded-[18px] border border-border bg-bg-primary py-2 shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
                       {item.children!.map((child) => {
                         const active = pathname === child.href;
                         return (
