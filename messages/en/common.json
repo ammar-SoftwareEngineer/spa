@@ -9,7 +9,9 @@
   },
   "nav": {
     "home": "Home",
-    "about": "About Us",
+    "about": "About",
+    "whoWeAre": "Who We Are",
+    "meetOurTeam": "Meet Our Team",
     "services": "Services",
     "projects": "Our Projects",
     "products": "Our Products",

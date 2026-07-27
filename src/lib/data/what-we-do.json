@@ -1,0 +1,6 @@
+[
+  { "icon": "PenTool", "titleKey": "item1Title", "descKey": "item1Desc" },
+  { "icon": "Package", "titleKey": "item2Title", "descKey": "item2Desc" },
+  { "icon": "Wrench", "titleKey": "item3Title", "descKey": "item3Desc" },
+  { "icon": "ShieldCheck", "titleKey": "item4Title", "descKey": "item4Desc" }
+]

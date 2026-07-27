@@ -1,0 +1,78 @@
+{
+  "board": [
+    {
+      "id": 1,
+      "nameKey": "board1Name",
+      "roleKey": "board1Role",
+      "image": "/img/team/man-board-01.jpg"
+    },
+    {
+      "id": 2,
+      "nameKey": "board2Name",
+      "roleKey": "board2Role",
+      "image": "/img/team/man-board-02.jpg"
+    },
+    {
+      "id": 3,
+      "nameKey": "board3Name",
+      "roleKey": "board3Role",
+      "image": "/img/team/man-board-03.jpg"
+    },
+    {
+      "id": 4,
+      "nameKey": "board4Name",
+      "roleKey": "board4Role",
+      "image": "/img/team/man-board-04.jpg"
+    }
+  ],
+  "team": [
+    {
+      "id": 5,
+      "nameKey": "team1Name",
+      "roleKey": "team1Role",
+      "image": "/img/team/man-team-01.jpg"
+    },
+    {
+      "id": 6,
+      "nameKey": "team2Name",
+      "roleKey": "team2Role",
+      "image": "/img/team/man-team-02.jpg"
+    },
+    {
+      "id": 7,
+      "nameKey": "team3Name",
+      "roleKey": "team3Role",
+      "image": "/img/team/man-team-03.jpg"
+    },
+    {
+      "id": 8,
+      "nameKey": "team4Name",
+      "roleKey": "team4Role",
+      "image": "/img/team/man-team-04.jpg"
+    },
+    {
+      "id": 9,
+      "nameKey": "team5Name",
+      "roleKey": "team5Role",
+      "image": "/img/team/man-team-05.jpg"
+    },
+    {
+      "id": 10,
+      "nameKey": "team6Name",
+      "roleKey": "team6Role",
+      "image": "/img/team/man-team-06.jpg"
+    },
+    {
+      "id": 11,
+      "nameKey": "team7Name",
+      "roleKey": "team7Role",
+      "image": "/img/team/man-team-07.jpg"
+    },
+    {
+      "id": 12,
+      "nameKey": "team8Name",
+      "roleKey": "team8Role",
+      "image": "/img/team/man-team-08.jpg"
+    }
+  ]
+}

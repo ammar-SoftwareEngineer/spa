@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "title": "Who We Are | S&PA",
+    "description": "Learn about S&PA — founded in 2014 to deliver quality MEP contracting, facility management, and ICT infrastructure across Egypt."
+  },
+  "hero": {
+    "eyebrow": "About S&PA",
+    "title": "Who We Are",
+    "description": "A specialized engineering company built on quality, certified systems, and long-term client partnership."
+  },
+  "about": {
+    "eyebrow": "About Us",
+    "title": "Engineering excellence since 2014",
+    "text": "S&PA was founded in 2014 by experienced engineers in the passive fire protection industry. With a commitment to every aspect of quality, our main objective has always been customer satisfaction. We design, supply, install, and maintain electro-mechanical works — delivering MEP contracting, facility management, and ICT infrastructure with globally recognized products and certified processes.",
+    "imageAlt": "S&PA MEP Contracting projects"
+  },
+  "counters": {
+    "yearsExp": "Years of Experience",
+    "sectorsCount": "Sectors Covered",
+    "isoCerts": "ISO Certifications",
+    "partnersCount": "Trusted Partners"
+  },
+  "mission": {
+    "eyebrow": "Our Mission",
+    "title": "Delivering reliable engineering with lasting value",
+    "text": "To design, supply, install, and maintain electro-mechanical solutions that meet client needs within budget — through certified quality systems, skilled teams, and globally recognized products.",
+    "imageAlt": "S&PA mission in engineering delivery"
+  },
+  "vision": {
+    "eyebrow": "Our Vision",
+    "title": "Leading MEP excellence across Egypt",
+    "text": "To be the preferred engineering partner for MEP contracting, facility management, and ICT infrastructure — known for safety, innovation, and customer satisfaction on every project.",
+    "imageAlt": "S&PA vision for engineering leadership"
+  },
+  "whatWeDo": {
+    "eyebrow": "What We Do",
+    "title": "From concept to lasting performance",
+    "description": "A complete delivery cycle that keeps every project safe, efficient, and aligned with client goals.",
+    "item1Title": "Design",
+    "item1Desc": "Engineering design and coordination that balance performance, safety, and practical site execution.",
+    "item2Title": "Supply",
+    "item2Desc": "Sourcing globally recognized products and materials that deliver clear advantages on every project.",
+    "item3Title": "Install",
+    "item3Desc": "Professional installation by certified teams across MEP, facility, and ICT infrastructure works.",
+    "item4Title": "Maintain",
+    "item4Desc": "Ongoing maintenance and support that protect assets and keep facilities running with confidence."
+  },
+  "cta": {
+    "eyebrow": "Our People",
+    "title": "Meet the engineers behind every project",
+    "description": "Discover the specialists who design, install, and support complex MEP and safety configurations.",
+    "button": "Meet Our Team"
+  }
+}

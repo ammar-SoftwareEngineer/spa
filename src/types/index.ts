@@ -5,6 +5,7 @@ export type LocalizedText = Record<AppLocale, string>;
 export type NavItem = {
   key: string;
   href: string;
+  children?: NavItem[];
 };
 
 export type SocialLink = {
@@ -26,6 +27,8 @@ export type SiteData = {
   media: {
     heroVideo: string;
     whoWeAreImage: string;
+    missionImage: string;
+    visionImage: string;
     teamBannerImage: string;
     isoBannerImage: string;
     servicesPattern: string;
@@ -85,4 +88,11 @@ export type WhyMetric = {
   icon?: string;
   isHighlight?: boolean;
   isCta?: boolean;
+};
+
+export type TeamMember = {
+  id: number;
+  nameKey: string;
+  roleKey: string;
+  image: string;
 };

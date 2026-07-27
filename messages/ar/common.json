@@ -9,7 +9,9 @@
   },
   "nav": {
     "home": "الرئيسية",
-    "about": "من نحن",
+    "about": "عن الشركة",
+    "whoWeAre": "من نحن",
+    "meetOurTeam": "تعرّف على فريقنا",
     "services": "خدماتنا",
     "projects": "مشاريعنا",
     "products": "منتجاتنا",

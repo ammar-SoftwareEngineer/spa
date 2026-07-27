@@ -17,8 +17,10 @@
   "media": {
     "heroVideo": "/img/SPA-Mansoura.mp4",
     "whoWeAreImage": "/img/who-we-are.png",
+    "missionImage": "/img/about/mission.jpg",
+    "visionImage": "/img/proj-contracting.png",
     "teamBannerImage": "/img/team.webp",
-    "isoBannerImage": "/img/team.webp",
+    "isoBannerImage": "/img/team/man-banner.jpg",
     "servicesPattern": "/img/pattern.png"
   }
 }

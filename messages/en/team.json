@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "title": "Meet Our Team | S&PA",
+    "description": "Meet the board and certified engineers behind S&PA's MEP contracting, facility management, and ICT projects."
+  },
+  "hero": {
+    "eyebrow": "Our People",
+    "title": "Meet Our Team",
+    "description": "Elite, certified engineers and specialists working together to deliver complex MEP and safety systems."
+  },
+  "intro": {
+    "eyebrow": "Leadership & Expertise",
+    "title": "The minds driving engineering & safety excellence",
+    "text": "Our people bring together deep technical experience across electro-mechanical contracting, facility management, and digital infrastructure. From design coordination to on-site execution and long-term maintenance, we collaborate closely to keep every project safe, efficient, and on target.",
+    "imageAlt": "S&PA engineering and leadership team"
+  },
+  "board": {
+    "eyebrow": "Board",
+    "title": "Directors & Owners",
+    "description": "The leadership guiding S&PA's vision, quality standards, and long-term growth."
+  },
+  "ourTeam": {
+    "eyebrow": "Our Team",
+    "title": "Specialists across every stage",
+    "description": "A cross-functional team covering design, project delivery, safety, and technical support."
+  },
+  "board1Name": "Ahmed Hassan",
+  "board1Role": "Chairman",
+  "board2Name": "Khaled Ibrahim",
+  "board2Role": "Managing Director",
+  "board3Name": "Mostafa Reda",
+  "board3Role": "Operations Director",
+  "board4Name": "Hassan Fathy",
+  "board4Role": "Technical Director",
+  "team1Name": "Youssef Hany",
+  "team1Role": "MEP Projects Manager",
+  "team2Name": "Omar Ali",
+  "team2Role": "Facility Management Lead",
+  "team3Name": "Samir Adel",
+  "team3Role": "ICT Infrastructure Manager",
+  "team4Name": "Karim Nabil",
+  "team4Role": "HSE & Compliance Manager",
+  "team5Name": "Tarek Hany",
+  "team5Role": "Design Coordination Lead",
+  "team6Name": "Mahmoud Essam",
+  "team6Role": "Site Engineering Lead",
+  "team7Name": "Farouk Amin",
+  "team7Role": "Quality Assurance Manager",
+  "team8Name": "Tamer Adel",
+  "team8Role": "Technical Support Lead"
+}
