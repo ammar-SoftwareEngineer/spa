@@ -30,49 +30,49 @@
       "id": 5,
       "nameKey": "team1Name",
       "roleKey": "team1Role",
-      "image": "/img/team/man-team-01.jpg"
+      "image": "/img/team/stock-team-01.jpg"
     },
     {
       "id": 6,
       "nameKey": "team2Name",
       "roleKey": "team2Role",
-      "image": "/img/team/man-team-02.jpg"
+      "image": "/img/team/stock-team-02.jpg"
     },
     {
       "id": 7,
       "nameKey": "team3Name",
       "roleKey": "team3Role",
-      "image": "/img/team/man-team-03.jpg"
+      "image": "/img/team/stock-team-03.jpg"
     },
     {
       "id": 8,
       "nameKey": "team4Name",
       "roleKey": "team4Role",
-      "image": "/img/team/man-team-04.jpg"
+      "image": "/img/team/stock-team-04.jpg"
     },
     {
       "id": 9,
       "nameKey": "team5Name",
       "roleKey": "team5Role",
-      "image": "/img/team/man-team-05.jpg"
+      "image": "/img/team/stock-team-05.jpg"
     },
     {
       "id": 10,
       "nameKey": "team6Name",
       "roleKey": "team6Role",
-      "image": "/img/team/man-team-06.jpg"
+      "image": "/img/team/stock-team-06.jpg"
     },
     {
       "id": 11,
       "nameKey": "team7Name",
       "roleKey": "team7Role",
-      "image": "/img/team/man-team-07.jpg"
+      "image": "/img/team/stock-team-07.jpg"
     },
     {
       "id": 12,
       "nameKey": "team8Name",
       "roleKey": "team8Role",
-      "image": "/img/team/man-team-08.jpg"
+      "image": "/img/team/stock-team-08.jpg"
     }
   ]
 }

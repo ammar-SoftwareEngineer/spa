@@ -28,6 +28,7 @@ export default async function BoardSection() {
             role={t(member.roleKey)}
             index={index}
             delay={index * 0.08}
+            variant="board"
           />
         ))}
       </div>

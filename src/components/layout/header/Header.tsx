@@ -68,6 +68,9 @@ export default function Header({ navItems, logoSrc }: HeaderProps) {
     ? "text-white opacity-90 after:origin-end after:scale-x-0 hover:text-brand hover:opacity-100 hover:after:origin-start hover:after:scale-x-100"
     : "text-text-primary opacity-80 after:origin-end after:scale-x-0 hover:text-brand hover:opacity-100 hover:after:origin-start hover:after:scale-x-100";
   const navLinkActive = "text-brand opacity-100 after:scale-x-100";
+  const actionBtnTone = useWhiteLinks
+    ? "border-white text-white hover:bg-white hover:text-[#0f172a]"
+    : "border-text-primary text-text-primary hover:bg-text-primary hover:text-bg-primary";
 
   return (
     <>
@@ -167,7 +170,7 @@ export default function Header({ navItems, logoSrc }: HeaderProps) {
             <button
               type="button"
               onClick={() => setTheme(switchTheme())}
-              className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-white bg-transparent text-text-primary transition-all hover:scale-105 hover:bg-text-primary hover:text-bg-primary"
+              className={`flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border bg-transparent transition-all hover:scale-105 ${actionBtnTone}`}
               aria-label="Toggle Theme"
               title={theme === "light" ? "Dark Mode" : "Light Mode"}
             >
@@ -177,7 +180,7 @@ export default function Header({ navItems, logoSrc }: HeaderProps) {
             <button
               type="button"
               onClick={switchLocale}
-              className="flex h-10 cursor-pointer items-center justify-center gap-1.5 rounded-full border border-white bg-transparent px-3 text-[0.85rem] font-semibold text-text-primary transition-all hover:scale-105 hover:bg-text-primary hover:text-bg-primary"
+              className={`flex h-10 cursor-pointer items-center justify-center gap-1.5 rounded-full border bg-transparent px-3 text-[0.85rem] font-semibold transition-all hover:scale-105 ${actionBtnTone}`}
               aria-label="Toggle Language"
             >
               <Globe size={16} />
@@ -187,7 +190,9 @@ export default function Header({ navItems, logoSrc }: HeaderProps) {
             <button
               type="button"
               onClick={() => setIsMobileMenuOpen((open) => !open)}
-              className="flex h-10 w-10 items-center justify-center bg-transparent text-text-primary lg:hidden"
+              className={`flex h-10 w-10 items-center justify-center bg-transparent lg:hidden ${
+                useWhiteLinks ? "text-white" : "text-text-primary"
+              }`}
               aria-label="Toggle Mobile Menu"
               aria-expanded={isMobileMenuOpen}
             >

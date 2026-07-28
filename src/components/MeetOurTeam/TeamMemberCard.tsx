@@ -8,6 +8,7 @@ type TeamMemberCardProps = {
   role: string;
   index?: number;
   delay?: number;
+  variant?: "board" | "team";
 };
 
 export default function TeamMemberCard({
@@ -16,8 +17,41 @@ export default function TeamMemberCard({
   role,
   index = 0,
   delay = 0,
+  variant = "board",
 }: TeamMemberCardProps) {
   const number = String(index + 1).padStart(2, "0");
+
+  if (variant === "team") {
+    return (
+      <Reveal delay={delay} className="col-span-12 sm:col-span-6 lg:col-span-3">
+        <article className="group relative h-full">
+          <div className="relative overflow-hidden rounded-[22px] pb-14">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[22px]">
+              <Image
+                src={member.image}
+                alt={name}
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                className="object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.05]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#061018]/45 via-transparent to-transparent" />
+            </div>
+
+            <div className="absolute inset-x-4 bottom-0 z-[2] translate-y-0 text-center">
+              <div className="rounded-[18px] border border-white/55 bg-white/90 px-4 py-3.5 shadow-[0_16px_40px_rgba(6,16,24,0.18)] backdrop-blur-2xl transition-all duration-500 group-hover:-translate-y-1 group-hover:bg-white/88 group-hover:shadow-[0_20px_48px_rgba(6,16,24,0.22)]">
+                <p className="mb-1 text-[0.7rem] font-bold uppercase tracking-[0.12em] text-brand">
+                  {role}
+                </p>
+                <h3 className="m-0 text-[1.05rem] font-bold leading-[1.25] text-[#0d3b4d] md:text-[1.15rem]">
+                  {name}
+                </h3>
+              </div>
+            </div>
+          </div>
+        </article>
+      </Reveal>
+    );
+  }
 
   return (
     <Reveal delay={delay} className="col-span-12 sm:col-span-6 lg:col-span-3">

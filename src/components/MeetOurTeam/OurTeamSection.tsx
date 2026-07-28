@@ -28,6 +28,7 @@ export default async function OurTeamSection() {
             role={t(member.roleKey)}
             index={index}
             delay={index * 0.06}
+            variant="team"
           />
         ))}
       </div>
