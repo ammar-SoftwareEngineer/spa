@@ -30,7 +30,7 @@ export default async function Why() {
       <div className="grid grid-cols-12 gap-8">
         {metrics.map((item, index) =>
           item.isCta ? (
-            <div key={item.titleKey} className="col-span-12 md:col-span-6 lg:col-span-4">
+            <div key={item.titleKey} className="col-span-12 md:col-span-6 lg:col-span-4 ">
               <WhyCtaCard
                 staggerIndex={index}
                 title={t(item.titleKey)}
