@@ -18,7 +18,7 @@ export default async function HeroSection() {
         />
       </div>
 
-      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-white/40 via-white/70 to-white dark:from-[rgba(10,15,29,0.6)] dark:via-[rgba(10,15,29,0.8)] dark:to-[rgba(10,15,29,1)]" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-white/10 via-white/10 to-white dark:from-[rgba(10,15,29,0.2)] dark:via-[rgba(10,15,29,0.2)] dark:to-[rgba(10,15,29,1)]" />
 
       <HeroScroll />
     </section>

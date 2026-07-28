@@ -49,12 +49,12 @@ export default async function CountersSection() {
                       </div>
 
                       <div className="flex items-end gap-2">
-                        <div className="text-[2.2rem] font-bold leading-none text-text-primary transition-colors duration-500 group-hover:text-brand ltr:font-[family-name:var(--font-bebas-neue)] ltr:text-[2.7rem] rtl:font-[family-name:var(--font-cairo)]">
-                          <CountUp value={counter.value} />
-                        </div>
                         <span className="pb-1 text-[1.05rem] font-bold leading-none text-brand ltr:font-[family-name:var(--font-bebas-neue)] rtl:font-[family-name:var(--font-cairo)]">
                           {counter.suffix}
                         </span>
+                        <div className="text-[2.2rem] font-bold leading-none text-text-primary transition-colors duration-500 group-hover:text-brand ltr:font-[family-name:var(--font-bebas-neue)] ltr:text-[2.7rem] rtl:font-[family-name:var(--font-cairo)]">
+                          <CountUp value={counter.value} />
+                        </div>
                       </div>
 
                       <span className="mt-3 block h-px w-14 bg-linear-to-r from-brand to-transparent transition-all duration-500 group-hover:w-24 rtl:bg-linear-to-l" />

@@ -59,8 +59,8 @@ export default async function WhoWeAre() {
                   </div>
                   <div className="min-w-0 flex-1">
                     <div className="text-[1.7rem] font-bold leading-none text-text-primary ltr:font-[family-name:var(--font-bebas-neue)] ltr:text-[1.95rem] rtl:font-[family-name:var(--font-cairo)]">
-                      <CountUp value={counter.value} />
                       {counter.suffix}
+                      <CountUp value={counter.value} />
                     </div>
                     <p className="mt-1.5 text-[0.88rem] font-medium leading-snug text-text-secondary">
                       {t(counter.key)}
