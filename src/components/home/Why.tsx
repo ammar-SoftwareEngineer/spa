@@ -3,15 +3,23 @@ import { WhyCtaCard, WhyMetricCard } from "@/components/why/WhyCards";
 import HeaderSection from "@/components/ui/HeaderSection";
 import Section from "@/components/ui/Section";
 import { getWhyMetrics } from "@/lib/api/why";
+import { getSiteData } from "@/lib/api/site";
 
 export default async function Why() {
-  const [metrics, t] = await Promise.all([
+  const [metrics, t, site] = await Promise.all([
     getWhyMetrics(),
     getTranslations("home.whyChooseUs"),
+    getSiteData(),
   ]);
 
   return (
-    <Section id="metrics" className="py-32" containerClassName="relative z-[2]">
+    <Section id="metrics" className="py-32" containerClassName="relative z-[2]"
+    style={{
+      backgroundImage: `url(${site.media.servicesPattern})`,
+      backgroundSize: "contain",
+      backgroundPosition: "top right",
+      backgroundRepeat: "no-repeat",
+    }}>
       <HeaderSection
         subtitle={t("title")}
         title={t("header")}

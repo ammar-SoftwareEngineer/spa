@@ -3,12 +3,14 @@ import Section from "@/components/ui/Section";
 import HeaderSection from "@/components/ui/HeaderSection";
 import CategoryCards from "@/components/categories/CategoryCards";
 import { getCategories } from "@/lib/api/categories";
+import { getSiteData } from "@/lib/api/site";
 
 export default async function Categories() {
-  const [categories, t, tServices] = await Promise.all([
+  const [categories, t, tServices, site] = await Promise.all([
     getCategories(),
     getTranslations("home.projects"),
     getTranslations("home.services"),
+    getSiteData(),
   ]);
 
   const cards = categories.map((category, index) => ({
@@ -26,6 +28,7 @@ export default async function Categories() {
       id="projects"
       className="overflow-x-clip py-[80px] lg:py-[120px]"
       containerClassName="flex flex-col"
+
     >
       <HeaderSection
         subtitle={t("title")}

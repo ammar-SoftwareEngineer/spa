@@ -29,13 +29,13 @@ export default function ServiceCard({
         href={`/services/${service.slug}`}
         className="group relative flex h-full flex-col overflow-hidden rounded-[28px] border border-border/60 bg-bg-primary shadow-[0_16px_48px_rgba(13,59,77,0.12)] outline-none transition-[border-color,box-shadow,transform] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5 hover:border-brand/40 hover:shadow-[0_28px_64px_rgba(33,118,149,0.24)] focus-visible:ring-2 focus-visible:ring-brand"
       >
-        <div className="relative aspect-[4/3] overflow-hidden">
+        <div className="relative h-96 w-full overflow-hidden">
           <Image
             src={service.image}
             alt={title}
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw"
-            className="object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.06]"
+            className="object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.06] h-full w-full"
           />
           <div className="absolute inset-0 z-[1] bg-gradient-to-t from-[#061018]/80 via-[#0d3b4d]/25 to-transparent" />
           <div className="pointer-events-none absolute inset-y-0 start-0 z-[2] w-1/2 -translate-x-full skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-[260%]" />

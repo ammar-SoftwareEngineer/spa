@@ -4,15 +4,18 @@ import Section from "@/components/ui/Section";
 import HeaderSection from "@/components/ui/HeaderSection";
 import PartnersSwiper from "@/components/partners/PartnersSwiper";
 import { getPartners } from "@/lib/api/partners";
-
+import { getSiteData } from "@/lib/api/site";
 export default async function Partners() {
-  const [partners, t] = await Promise.all([
+  const [partners, t, site] = await Promise.all([
     getPartners(),
     getTranslations("home.partners"),
+    getSiteData(),
   ]);
 
   return (
-    <Section id="partners" variant="alt" className="overflow-x-clip py-[70px] md:py-[100px]">
+    <Section id="partners" variant="alt" className="overflow-x-clip py-[70px] md:py-[100px]"
+    
+  >
       <HeaderSection
         subtitle={t("title")}
         title={t("header")}
