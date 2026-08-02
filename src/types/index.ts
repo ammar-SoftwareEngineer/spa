@@ -52,10 +52,23 @@ export type ProjectItem = {
   descKey: string;
   locationKey: string;
   image: string;
+  categorySlugs: string[];
   serviceSlugs: string[];
+  sectorSlugs: string[];
+  date: string;
+  featured?: boolean;
+  clientKey: string;
+  consultantKey: string;
+  statusKey: string;
+  overviewTitleKey: string;
+  overviewBodyKey: string;
+  scopeTitleKey: string;
+  scopeBodyKey: string;
+  gallery: string[];
 };
 
 export type CategoryItem = {
+  slug: string;
   badgeKey: string;
   titleKey: string;
   descKey: string;
@@ -64,6 +77,7 @@ export type CategoryItem = {
 };
 
 export type SectorItem = {
+  slug: string;
   icon: string;
   titleKey: string;
   descKey: string;

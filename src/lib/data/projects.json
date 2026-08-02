@@ -5,7 +5,26 @@
     "descKey": "project1Desc",
     "locationKey": "project1Location",
     "image": "/img/proj-contracting.png",
-    "serviceSlugs": ["mep-contracting", "professional-maintenance"]
+    "categorySlugs": ["mep-contracting"],
+    "serviceSlugs": ["mep-contracting", "professional-maintenance"],
+    "sectorSlugs": ["fintech", "banks"],
+    "date": "2024-11-15",
+    "featured": true,
+    "clientKey": "project1Client",
+    "consultantKey": "project1Consultant",
+    "statusKey": "statusCompleted",
+    "overviewTitleKey": "project1OverviewTitle",
+    "overviewBodyKey": "project1OverviewBody",
+    "scopeTitleKey": "project1ScopeTitle",
+    "scopeBodyKey": "project1ScopeBody",
+    "gallery": [
+      "/img/proj-contracting.png",
+      "/img/breadcrumb/hero.jpg",
+      "/img/about/mission-2.jpg",
+      "/img/breadcrumb/bc-1.jpg",
+      "/img/about/mission.jpg",
+      "/img/breadcrumb/bc-2.jpg"
+    ]
   },
   {
     "slug": "heliopolis-tower",
@@ -13,7 +32,26 @@
     "descKey": "project2Desc",
     "locationKey": "project2Location",
     "image": "/img/breadcrumb/hero.jpg",
-    "serviceSlugs": ["mep-contracting", "facility-management", "ict-infrastructure"]
+    "categorySlugs": ["mep-contracting", "facility-management"],
+    "serviceSlugs": ["mep-contracting", "facility-management", "ict-infrastructure"],
+    "sectorSlugs": ["banks", "fintech"],
+    "date": "2024-12-02",
+    "featured": true,
+    "clientKey": "project2Client",
+    "consultantKey": "project2Consultant",
+    "statusKey": "statusCompleted",
+    "overviewTitleKey": "project2OverviewTitle",
+    "overviewBodyKey": "project2OverviewBody",
+    "scopeTitleKey": "project2ScopeTitle",
+    "scopeBodyKey": "project2ScopeBody",
+    "gallery": [
+      "/img/breadcrumb/hero.jpg",
+      "/img/proj-contracting.png",
+      "/img/proj-firefighting.png",
+      "/img/breadcrumb/bc-3.jpg",
+      "/img/about/mission-1.jpg",
+      "/img/about/mission-3.jpg"
+    ]
   },
   {
     "slug": "cairo-datacenter",
@@ -21,7 +59,26 @@
     "descKey": "project3Desc",
     "locationKey": "project3Location",
     "image": "/img/breadcrumb/bc-3.jpg",
-    "serviceSlugs": ["ict-infrastructure", "professional-maintenance", "mep-contracting"]
+    "categorySlugs": ["mep-contracting"],
+    "serviceSlugs": ["ict-infrastructure", "professional-maintenance", "mep-contracting"],
+    "sectorSlugs": ["datacenters"],
+    "date": "2025-01-10",
+    "featured": true,
+    "clientKey": "project3Client",
+    "consultantKey": "project3Consultant",
+    "statusKey": "statusInProgress",
+    "overviewTitleKey": "project3OverviewTitle",
+    "overviewBodyKey": "project3OverviewBody",
+    "scopeTitleKey": "project3ScopeTitle",
+    "scopeBodyKey": "project3ScopeBody",
+    "gallery": [
+      "/img/breadcrumb/bc-3.jpg",
+      "/img/breadcrumb/bc-4.jpg",
+      "/img/about/mission-4.jpg",
+      "/img/proj-contracting.png",
+      "/img/breadcrumb/bc-5.jpg",
+      "/img/who-we-are.png"
+    ]
   },
   {
     "slug": "new-admin-capital",
@@ -29,7 +86,26 @@
     "descKey": "project4Desc",
     "locationKey": "project4Location",
     "image": "/img/who-we-are.png",
-    "serviceSlugs": ["facility-management", "professional-maintenance"]
+    "categorySlugs": ["facility-management"],
+    "serviceSlugs": ["facility-management", "professional-maintenance"],
+    "sectorSlugs": ["ministries"],
+    "date": "2024-09-20",
+    "featured": false,
+    "clientKey": "project4Client",
+    "consultantKey": "project4Consultant",
+    "statusKey": "statusCompleted",
+    "overviewTitleKey": "project4OverviewTitle",
+    "overviewBodyKey": "project4OverviewBody",
+    "scopeTitleKey": "project4ScopeTitle",
+    "scopeBodyKey": "project4ScopeBody",
+    "gallery": [
+      "/img/who-we-are.png",
+      "/img/proj-firefighting.png",
+      "/img/about/mission.jpg",
+      "/img/breadcrumb/bc-2.jpg",
+      "/img/about/mission-2.jpg",
+      "/img/breadcrumb/hero.jpg"
+    ]
   },
   {
     "slug": "airport-facility",
@@ -37,7 +113,26 @@
     "descKey": "project5Desc",
     "locationKey": "project5Location",
     "image": "/img/proj-firefighting.png",
-    "serviceSlugs": ["mep-contracting", "facility-management", "professional-maintenance"]
+    "categorySlugs": ["mep-contracting", "facility-management"],
+    "serviceSlugs": ["mep-contracting", "facility-management", "professional-maintenance"],
+    "sectorSlugs": ["airports"],
+    "date": "2024-08-12",
+    "featured": false,
+    "clientKey": "project5Client",
+    "consultantKey": "project5Consultant",
+    "statusKey": "statusCompleted",
+    "overviewTitleKey": "project5OverviewTitle",
+    "overviewBodyKey": "project5OverviewBody",
+    "scopeTitleKey": "project5ScopeTitle",
+    "scopeBodyKey": "project5ScopeBody",
+    "gallery": [
+      "/img/proj-firefighting.png",
+      "/img/breadcrumb/bc-5.jpg",
+      "/img/proj-contracting.png",
+      "/img/about/mission-3.jpg",
+      "/img/breadcrumb/bc-1.jpg",
+      "/img/about/mission-1.jpg"
+    ]
   },
   {
     "slug": "bank-hq-fitout",
@@ -45,7 +140,26 @@
     "descKey": "project6Desc",
     "locationKey": "project6Location",
     "image": "/img/about/mission-2.jpg",
-    "serviceSlugs": ["ict-infrastructure", "mep-contracting"]
+    "categorySlugs": ["mep-contracting"],
+    "serviceSlugs": ["ict-infrastructure", "mep-contracting"],
+    "sectorSlugs": ["banks"],
+    "date": "2024-10-05",
+    "featured": true,
+    "clientKey": "project6Client",
+    "consultantKey": "project6Consultant",
+    "statusKey": "statusCompleted",
+    "overviewTitleKey": "project6OverviewTitle",
+    "overviewBodyKey": "project6OverviewBody",
+    "scopeTitleKey": "project6ScopeTitle",
+    "scopeBodyKey": "project6ScopeBody",
+    "gallery": [
+      "/img/about/mission-2.jpg",
+      "/img/breadcrumb/bc-3.jpg",
+      "/img/proj-contracting.png",
+      "/img/about/mission-4.jpg",
+      "/img/breadcrumb/hero.jpg",
+      "/img/breadcrumb/bc-4.jpg"
+    ]
   },
   {
     "slug": "hospital-complex",
@@ -53,7 +167,26 @@
     "descKey": "project7Desc",
     "locationKey": "project7Location",
     "image": "/img/breadcrumb/bc-5.jpg",
-    "serviceSlugs": ["facility-management", "mep-contracting", "professional-maintenance"]
+    "categorySlugs": ["facility-management", "mep-contracting"],
+    "serviceSlugs": ["facility-management", "mep-contracting", "professional-maintenance"],
+    "sectorSlugs": ["ministries", "schools"],
+    "date": "2024-07-18",
+    "featured": false,
+    "clientKey": "project7Client",
+    "consultantKey": "project7Consultant",
+    "statusKey": "statusInProgress",
+    "overviewTitleKey": "project7OverviewTitle",
+    "overviewBodyKey": "project7OverviewBody",
+    "scopeTitleKey": "project7ScopeTitle",
+    "scopeBodyKey": "project7ScopeBody",
+    "gallery": [
+      "/img/breadcrumb/bc-5.jpg",
+      "/img/proj-firefighting.png",
+      "/img/about/mission.jpg",
+      "/img/who-we-are.png",
+      "/img/about/mission-3.jpg",
+      "/img/proj-contracting.png"
+    ]
   },
   {
     "slug": "telecom-hub",
@@ -61,6 +194,25 @@
     "descKey": "project8Desc",
     "locationKey": "project8Location",
     "image": "/img/breadcrumb/bc-4.jpg",
-    "serviceSlugs": ["ict-infrastructure", "professional-maintenance"]
+    "categorySlugs": ["mep-contracting"],
+    "serviceSlugs": ["ict-infrastructure", "professional-maintenance"],
+    "sectorSlugs": ["telecom", "datacenters"],
+    "date": "2024-12-20",
+    "featured": false,
+    "clientKey": "project8Client",
+    "consultantKey": "project8Consultant",
+    "statusKey": "statusCompleted",
+    "overviewTitleKey": "project8OverviewTitle",
+    "overviewBodyKey": "project8OverviewBody",
+    "scopeTitleKey": "project8ScopeTitle",
+    "scopeBodyKey": "project8ScopeBody",
+    "gallery": [
+      "/img/breadcrumb/bc-4.jpg",
+      "/img/breadcrumb/bc-3.jpg",
+      "/img/proj-contracting.png",
+      "/img/about/mission-1.jpg",
+      "/img/breadcrumb/bc-1.jpg",
+      "/img/about/mission-4.jpg"
+    ]
   }
 ]

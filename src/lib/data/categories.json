@@ -1,16 +1,18 @@
 [
   {
+    "slug": "mep-contracting",
     "badgeKey": "service1Title",
     "titleKey": "catContracting",
     "descKey": "catContractingDesc",
     "image": "/img/proj-contracting.png",
-    "link": "#projects-contracting"
+    "link": "/projects/mep-contracting"
   },
   {
+    "slug": "facility-management",
     "badgeKey": "service2Title",
     "titleKey": "catFire",
     "descKey": "catFireDesc",
     "image": "/img/proj-firefighting.png",
-    "link": "#projects-firefighting"
+    "link": "/projects/facility-management"
   }
 ]

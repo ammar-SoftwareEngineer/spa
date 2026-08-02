@@ -1,10 +1,10 @@
 [
-  { "icon": "Landmark", "titleKey": "banks", "descKey": "banksDesc" },
-  { "icon": "Radio", "titleKey": "telecom", "descKey": "telecomDesc" },
-  { "icon": "Wallet", "titleKey": "fintech", "descKey": "fintechDesc" },
-  { "icon": "Server", "titleKey": "datacenters", "descKey": "datacentersDesc" },
-  { "icon": "Building2", "titleKey": "ministries", "descKey": "ministriesDesc" },
-  { "icon": "Plane", "titleKey": "airports", "descKey": "airportsDesc" },
-  { "icon": "GraduationCap", "titleKey": "schools", "descKey": "schoolsDesc" },
-  { "icon": "Hotel", "titleKey": "hotels", "descKey": "hotelsDesc" }
+  { "slug": "banks", "icon": "Landmark", "titleKey": "banks", "descKey": "banksDesc" },
+  { "slug": "telecom", "icon": "Radio", "titleKey": "telecom", "descKey": "telecomDesc" },
+  { "slug": "fintech", "icon": "Wallet", "titleKey": "fintech", "descKey": "fintechDesc" },
+  { "slug": "datacenters", "icon": "Server", "titleKey": "datacenters", "descKey": "datacentersDesc" },
+  { "slug": "ministries", "icon": "Building2", "titleKey": "ministries", "descKey": "ministriesDesc" },
+  { "slug": "airports", "icon": "Plane", "titleKey": "airports", "descKey": "airportsDesc" },
+  { "slug": "schools", "icon": "GraduationCap", "titleKey": "schools", "descKey": "schoolsDesc" },
+  { "slug": "hotels", "icon": "Hotel", "titleKey": "hotels", "descKey": "hotelsDesc" }
 ]

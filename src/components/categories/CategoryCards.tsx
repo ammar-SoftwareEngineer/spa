@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import Reveal from "@/components/ui/Reveal";
+import { Link } from "@/i18n/navigation";
 
 export type CategoryCardData = {
   title: string;
@@ -38,7 +39,7 @@ function CategoryCard({ category }: { category: CategoryCardData }) {
   const number = String(category.index + 1).padStart(2, "0");
 
   return (
-    <a
+    <Link
       href={category.link}
       className="group relative flex h-[400px] items-end overflow-hidden rounded-[28px] border border-border/60 shadow-[0_16px_48px_rgba(13,59,77,0.14)] outline-none transition-[border-color,box-shadow,transform] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:border-brand/40 hover:shadow-[0_28px_64px_rgba(33,118,149,0.28)] focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 md:h-[520px] md:rounded-[32px]"
     >
@@ -95,6 +96,6 @@ function CategoryCard({ category }: { category: CategoryCardData }) {
           </span>
         </div>
       </div>
-    </a>
+    </Link>
   );
 }
