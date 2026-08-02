@@ -46,6 +46,24 @@ export type ServiceItem = {
   featureKeys: string[];
 };
 
+export type ProductLineItem = {
+  titleKey: string;
+  descKey: string;
+  image: string;
+};
+
+export type ProductItem = {
+  slug: string;
+  icon: string;
+  titleKey: string;
+  descKey: string;
+  detailKey: string;
+  image: string;
+  website?: string;
+  featureKeys: string[];
+  lines: ProductLineItem[];
+};
+
 export type ProjectItem = {
   slug: string;
   titleKey: string;

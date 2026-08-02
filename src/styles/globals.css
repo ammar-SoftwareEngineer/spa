@@ -402,20 +402,7 @@
   --swiper-navigation-size: 22px;
 }
 
-.project-gallery-main .swiper-button-prev,
-.project-gallery-main .swiper-button-next {
-  width: 42px;
-  height: 42px;
-  border-radius: 999px;
-  background: rgba(6, 16, 24, 0.45);
-  backdrop-filter: blur(6px);
-}
 
-.project-gallery-main .swiper-button-prev::after,
-.project-gallery-main .swiper-button-next::after {
-  font-size: 16px;
-  font-weight: 700;
-}
 
 @media (max-width: 639px) {
   .project-gallery-main .swiper-button-prev,

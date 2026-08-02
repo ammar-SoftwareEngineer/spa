@@ -1,0 +1,108 @@
+[
+  {
+    "slug": "american-afc",
+    "icon": "Flame",
+    "titleKey": "afcTitle",
+    "descKey": "afcDesc",
+    "detailKey": "afcDetail",
+    "image": "/img/proj-firefighting.png",
+    "website": "https://american-afc.com/store/",
+    "featureKeys": ["afcFeature1", "afcFeature2", "afcFeature3"],
+    "lines": [
+      {
+        "titleKey": "afcLineValvesTitle",
+        "descKey": "afcLineValvesDesc",
+        "image": "/img/proj-firefighting.png"
+      },
+      {
+        "titleKey": "afcLineHydrantsTitle",
+        "descKey": "afcLineHydrantsDesc",
+        "image": "/img/article-fire-safety.png"
+      },
+      {
+        "titleKey": "afcLineSuppressionTitle",
+        "descKey": "afcLineSuppressionDesc",
+        "image": "/img/breadcrumb/bc-2.jpg"
+      },
+      {
+        "titleKey": "afcLineConnectionsTitle",
+        "descKey": "afcLineConnectionsDesc",
+        "image": "/img/breadcrumb/bc-1.jpg"
+      },
+      {
+        "titleKey": "afcLineHosesTitle",
+        "descKey": "afcLineHosesDesc",
+        "image": "/img/about/mission-2.jpg"
+      },
+      {
+        "titleKey": "afcLineExtinguishersTitle",
+        "descKey": "afcLineExtinguishersDesc",
+        "image": "/img/about/mission-3.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "honeywell",
+    "icon": "Building2",
+    "titleKey": "honeywellTitle",
+    "descKey": "honeywellDesc",
+    "detailKey": "honeywellDetail",
+    "image": "/img/breadcrumb/bc-3.jpg",
+    "website": "https://www.honeywell.com/us/en",
+    "featureKeys": ["honeywellFeature1", "honeywellFeature2", "honeywellFeature3"],
+    "lines": [
+      {
+        "titleKey": "honeywellLineBuildingsTitle",
+        "descKey": "honeywellLineBuildingsDesc",
+        "image": "/img/proj-contracting.png"
+      },
+      {
+        "titleKey": "honeywellLineIndustrialTitle",
+        "descKey": "honeywellLineIndustrialDesc",
+        "image": "/img/article-engineering.png"
+      },
+      {
+        "titleKey": "honeywellLineSafetyTitle",
+        "descKey": "honeywellLineSafetyDesc",
+        "image": "/img/article-fire-safety.png"
+      },
+      {
+        "titleKey": "honeywellLineProcessTitle",
+        "descKey": "honeywellLineProcessDesc",
+        "image": "/img/breadcrumb/bc-4.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "spa",
+    "icon": "Package",
+    "titleKey": "spaTitle",
+    "descKey": "spaDesc",
+    "detailKey": "spaDetail",
+    "image": "/img/who-we-are.png",
+    "website": "https://www.spacorp-eg.com/",
+    "featureKeys": ["spaFeature1", "spaFeature2", "spaFeature3"],
+    "lines": [
+      {
+        "titleKey": "spaLineMepTitle",
+        "descKey": "spaLineMepDesc",
+        "image": "/img/proj-contracting.png"
+      },
+      {
+        "titleKey": "spaLineFacilityTitle",
+        "descKey": "spaLineFacilityDesc",
+        "image": "/img/about/mission.jpg"
+      },
+      {
+        "titleKey": "spaLineIctTitle",
+        "descKey": "spaLineIctDesc",
+        "image": "/img/breadcrumb/bc-3.jpg"
+      },
+      {
+        "titleKey": "spaLineFireTitle",
+        "descKey": "spaLineFireDesc",
+        "image": "/img/proj-firefighting.png"
+      }
+    ]
+  }
+]

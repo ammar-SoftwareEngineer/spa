@@ -55,8 +55,22 @@ export default function Header({ navItems, logoSrc }: HeaderProps) {
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   const isChildActive = (item: NavItem) =>
-    item.children?.some((child) => pathname === child.href || pathname.startsWith(`${child.href}/`)) ??
-    false;
+    item.children?.some(
+      (child) =>
+        pathname === child.href ||
+        (child.href !== "/" && pathname.startsWith(`${child.href}/`))
+    ) ?? false;
+
+  const isItemActive = (item: NavItem) => {
+    if (item.children?.length) {
+      return (
+        pathname === item.href ||
+        (item.href !== "/" && pathname.startsWith(`${item.href}/`)) ||
+        isChildActive(item)
+      );
+    }
+    return pathname === item.href || (item.href !== "/" && pathname.startsWith(`${item.href}/`));
+  };
 
   const isLight = theme === "light";
   const isHome = pathname === "/";
@@ -122,7 +136,7 @@ export default function Header({ navItems, logoSrc }: HeaderProps) {
                   <button
                     type="button"
                     className={`${navLinkBase} flex cursor-pointer items-center gap-1 ${
-                      isOpen || isChildActive(item) ? navLinkActive : navLinkIdle
+                      isOpen || isItemActive(item) ? navLinkActive : navLinkIdle
                     }`}
                     aria-expanded={isOpen}
                     aria-haspopup="true"
@@ -143,7 +157,11 @@ export default function Header({ navItems, logoSrc }: HeaderProps) {
                   >
                     <ul className="grid min-w-[200px] list-none gap-2 rounded-[18px] border border-border bg-bg-primary py-2 shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
                       {item.children!.map((child) => {
-                        const active = pathname === child.href;
+                        const active =
+                          pathname === child.href ||
+                          (child.href !== item.href &&
+                            child.href !== "/" &&
+                            pathname.startsWith(`${child.href}/`));
                         return (
                           <li key={child.key}>
                             <Link

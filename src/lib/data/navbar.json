@@ -11,7 +11,16 @@
     },
     { "key": "services", "href": "/services" },
     { "key": "projects", "href": "/projects" },
-    { "key": "products", "href": "/#products" },
+    {
+      "key": "products",
+      "href": "/products",
+      "children": [
+        { "key": "allProducts", "href": "/products" },
+        { "key": "americanAfc", "href": "/products/american-afc" },
+        { "key": "honeywell", "href": "/products/honeywell" },
+        { "key": "spaProducts", "href": "/products/spa" }
+      ]
+    },
     { "key": "partners", "href": "/#partners" },
     { "key": "contact", "href": "/contact" }
   ],
@@ -20,6 +29,7 @@
     { "key": "meetOurTeam", "href": "/team" },
     { "key": "services", "href": "/services" },
     { "key": "projects", "href": "/projects" },
+    { "key": "products", "href": "/products" },
     { "key": "partners", "href": "/#partners" },
     { "key": "contact", "href": "/contact" }
   ]
