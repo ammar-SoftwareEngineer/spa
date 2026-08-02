@@ -1,8 +1,8 @@
 import { getTranslations } from "next-intl/server";
 import type { CategoryItem, ProjectItem, SectorItem } from "@/types";
-import type { ProjectListItem } from "@/components/Projects/ProjectsExplorer";
+import type { ProjectListItem } from "@/components/Projects/types";
 
-/** Shared mapper so list + category pages build the same project cards. */
+/** Convert project keys into ready text for the client components. */
 export async function mapProjectsToListItems(
   projects: ProjectItem[],
   categories: CategoryItem[],

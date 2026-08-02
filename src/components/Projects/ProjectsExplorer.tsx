@@ -1,33 +1,32 @@
 "use client";
 
-import { useMemo, useState, type ReactNode } from "react";
-import { useTranslations } from "next-intl";
-import { Search, X } from "lucide-react";
-import ProjectCard from "@/components/Services/ProjectCard";
-import type { CategoryItem, ProjectItem, SectorItem } from "@/types";
+import type { ReactNode } from "react";
+import ProjectFilters from "@/components/Projects/ProjectFilters";
+import ProjectGrid from "@/components/Projects/ProjectGrid";
+import { useProjectFilters } from "@/components/Projects/useProjectFilters";
+import type { ProjectListItem } from "@/components/Projects/types";
+import type { CategoryItem, SectorItem } from "@/types";
 
-export type ProjectListItem = ProjectItem & {
-  title: string;
-  description: string;
-  location: string;
-  categoryLabels: string[];
-  sectorLabels: string[];
-};
-
-type SortOption = "recommended" | "newest" | "oldest" | "name-asc" | "name-desc";
+export type { ProjectListItem };
 
 type ProjectsExplorerProps = {
   projects: ProjectListItem[];
   categories: CategoryItem[];
   sectors: SectorItem[];
-  /** Category pages: always show the project grid under the filter. */
+  // Category page: always show the project list
   alwaysShowProjects?: boolean;
-  /** Pre-select Scope of Works (category slug). */
+  // Category page: start with this scope selected
   initialScope?: string;
-  /** Main projects page: category cards while filters are idle. */
+  // Main projects page: show this when filters are empty (category cards)
   idleContent?: ReactNode;
 };
 
+/**
+ * Filter bar + project list.
+ *
+ * - Main /projects page: shows idleContent until user filters
+ * - Category page: alwaysShowProjects + initialScope
+ */
 export default function ProjectsExplorer({
   projects,
   categories,
@@ -36,217 +35,33 @@ export default function ProjectsExplorer({
   initialScope = "",
   idleContent,
 }: ProjectsExplorerProps) {
-  const t = useTranslations("projects");
-  const tHome = useTranslations("home.projects");
-  const tSectors = useTranslations("home.sectors");
+  const filters = useProjectFilters(projects, initialScope);
 
-  const [scope, setScope] = useState(initialScope);
-  const [sector, setSector] = useState("");
-  const [sort, setSort] = useState<SortOption>("recommended");
-  const [query, setQuery] = useState("");
-
-  const isDirty =
-    scope !== initialScope ||
-    Boolean(sector) ||
-    Boolean(query.trim()) ||
-    sort !== "recommended";
-
-  const showProjects = alwaysShowProjects || isDirty;
-
-  const filtered = useMemo(() => {
-    const q = query.trim().toLowerCase();
-
-    let list = projects.filter((project) => {
-      if (scope && !project.categorySlugs.includes(scope)) return false;
-      if (sector && !project.sectorSlugs.includes(sector)) return false;
-      if (!q) return true;
-
-      const haystack = [
-        project.title,
-        project.description,
-        project.location,
-        ...project.categoryLabels,
-        ...project.sectorLabels,
-      ]
-        .join(" ")
-        .toLowerCase();
-
-      return haystack.includes(q);
-    });
-
-    list = [...list].sort((a, b) => {
-      switch (sort) {
-        case "newest":
-          return b.date.localeCompare(a.date);
-        case "oldest":
-          return a.date.localeCompare(b.date);
-        case "name-asc":
-          return a.title.localeCompare(b.title);
-        case "name-desc":
-          return b.title.localeCompare(a.title);
-        case "recommended":
-        default: {
-          const featuredDiff = Number(Boolean(b.featured)) - Number(Boolean(a.featured));
-          if (featuredDiff !== 0) return featuredDiff;
-          return b.date.localeCompare(a.date);
-        }
-      }
-    });
-
-    return list;
-  }, [projects, scope, sector, sort, query]);
-
-  function clearFilters() {
-    setScope(initialScope);
-    setSector("");
-    setSort("recommended");
-    setQuery("");
-  }
-
-  const selectClass =
-    "w-full min-h-11 appearance-none rounded-xl border border-border bg-bg-primary px-3 py-2.5 pe-10 text-[0.88rem] text-text-primary outline-none transition-[border-color,box-shadow] focus:border-brand focus:shadow-[0_0_0_3px_rgba(33,118,149,0.15)] sm:px-4 sm:py-3 sm:text-[0.92rem]";
+  // Show projects on category pages, or when the user starts filtering
+  const showProjects = alwaysShowProjects || filters.isDirty;
 
   return (
     <div className="flex flex-col gap-6 sm:gap-8 md:gap-10">
-      <div className="rounded-[18px] border border-border/70 bg-bg-secondary/60 p-3 shadow-[var(--card-shadow)] backdrop-blur-sm sm:rounded-[24px] sm:p-4 md:p-5">
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 xl:grid-cols-4">
-          <label className="flex flex-col gap-1.5 sm:gap-2">
-            <span className="text-[0.72rem] font-bold uppercase tracking-[0.1em] text-text-muted sm:text-[0.78rem]">
-              {t("filters.scope")}
-            </span>
-            <div className="relative">
-              <select
-                value={scope}
-                onChange={(e) => setScope(e.target.value)}
-                className={selectClass}
-                aria-label={t("filters.scope")}
-              >
-                <option value="">{t("filters.scopeAll")}</option>
-                {categories.map((category) => (
-                  <option key={category.slug} value={category.slug}>
-                    {tHome(category.titleKey)}
-                  </option>
-                ))}
-              </select>
-              <span className="pointer-events-none absolute inset-y-0 end-3 flex items-center text-text-muted">
-                ▾
-              </span>
-            </div>
-          </label>
+      <ProjectFilters
+        categories={categories}
+        sectors={sectors}
+        scope={filters.scope}
+        sector={filters.sector}
+        sort={filters.sort}
+        query={filters.query}
+        resultCount={filters.filtered.length}
+        showResults={showProjects}
+        isDirty={filters.isDirty}
+        onScopeChange={filters.setScope}
+        onSectorChange={filters.setSector}
+        onSortChange={filters.setSort}
+        onQueryChange={filters.setQuery}
+        onClear={filters.clearFilters}
+      />
 
-          <label className="flex flex-col gap-1.5 sm:gap-2">
-            <span className="text-[0.72rem] font-bold uppercase tracking-[0.1em] text-text-muted sm:text-[0.78rem]">
-              {t("filters.sector")}
-            </span>
-            <div className="relative">
-              <select
-                value={sector}
-                onChange={(e) => setSector(e.target.value)}
-                className={selectClass}
-                aria-label={t("filters.sector")}
-              >
-                <option value="">{t("filters.sectorAll")}</option>
-                {sectors.map((item) => (
-                  <option key={item.slug} value={item.slug}>
-                    {tSectors(item.titleKey)}
-                  </option>
-                ))}
-              </select>
-              <span className="pointer-events-none absolute inset-y-0 end-3 flex items-center text-text-muted">
-                ▾
-              </span>
-            </div>
-          </label>
+      {!showProjects && idleContent}
 
-          <label className="flex flex-col gap-1.5 sm:gap-2">
-            <span className="text-[0.72rem] font-bold uppercase tracking-[0.1em] text-text-muted sm:text-[0.78rem]">
-              {t("filters.sort")}
-            </span>
-            <div className="relative">
-              <select
-                value={sort}
-                onChange={(e) => setSort(e.target.value as SortOption)}
-                className={selectClass}
-                aria-label={t("filters.sort")}
-              >
-                <option value="recommended">{t("filters.sortRecommended")}</option>
-                <option value="newest">{t("filters.sortNewest")}</option>
-                <option value="oldest">{t("filters.sortOldest")}</option>
-                <option value="name-asc">{t("filters.sortNameAsc")}</option>
-                <option value="name-desc">{t("filters.sortNameDesc")}</option>
-              </select>
-              <span className="pointer-events-none absolute inset-y-0 end-3 flex items-center text-text-muted">
-                ▾
-              </span>
-            </div>
-          </label>
-
-          <label className="flex flex-col gap-1.5 sm:gap-2">
-            <span className="text-[0.72rem] font-bold uppercase tracking-[0.1em] text-text-muted sm:text-[0.78rem]">
-              {t("filters.search")}
-            </span>
-            <div className="relative">
-              <Search
-                size={16}
-                className="pointer-events-none absolute start-3.5 top-1/2 -translate-y-1/2 text-text-muted"
-              />
-              <input
-                type="search"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                placeholder={t("filters.searchPlaceholder")}
-                className={`${selectClass} ps-10`}
-                aria-label={t("filters.search")}
-              />
-            </div>
-          </label>
-        </div>
-
-        {showProjects ? (
-          <div className="mt-3 flex flex-wrap items-center justify-between gap-2 border-t border-border/60 pt-3 sm:mt-4 sm:gap-3 sm:pt-4">
-            <p className="m-0 text-[0.85rem] text-text-secondary sm:text-[0.9rem]">
-              {t("filters.results", { count: filtered.length })}
-            </p>
-            {isDirty ? (
-              <button
-                type="button"
-                onClick={clearFilters}
-                className="inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-[0.8rem] font-semibold text-brand transition-colors hover:bg-brand/10 sm:text-[0.85rem]"
-              >
-                <X size={14} />
-                {t("filters.clear")}
-              </button>
-            ) : null}
-          </div>
-        ) : null}
-      </div>
-
-      {!showProjects && idleContent ? idleContent : null}
-
-      {showProjects ? (
-        filtered.length > 0 ? (
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 md:gap-7">
-            {filtered.map((project, index) => (
-              <ProjectCard
-                key={project.slug}
-                project={project}
-                title={project.title}
-                description={project.description}
-                location={project.location}
-                tags={[
-                  ...project.categoryLabels.slice(0, 1),
-                  ...project.sectorLabels.slice(0, 1),
-                ]}
-                delay={Math.min(index, 8) * 0.06}
-              />
-            ))}
-          </div>
-        ) : (
-          <p className="rounded-[20px] border border-dashed border-border px-4 py-12 text-center text-[0.95rem] text-text-secondary sm:rounded-[24px] sm:px-6 sm:py-16">
-            {t("filters.empty")}
-          </p>
-        )
-      ) : null}
+      {showProjects && <ProjectGrid projects={filters.filtered} />}
     </div>
   );
 }
