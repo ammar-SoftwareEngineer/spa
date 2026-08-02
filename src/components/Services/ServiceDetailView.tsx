@@ -97,7 +97,7 @@ export default async function ServiceDetailView({
         />
 
         {projects.length > 0 ? (
-          <div className="grid grid-cols-12 gap-6 md:gap-7">
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 md:gap-7">
             {projects.map((project, index) => (
               <ProjectCard
                 key={project.slug}

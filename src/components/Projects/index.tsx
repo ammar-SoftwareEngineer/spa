@@ -40,7 +40,7 @@ export default async function ProjectsPageView() {
         currentLabel={tNav("projects")}
       />
 
-      <Section className="overflow-x-clip py-20 md:py-28">
+      <Section className="overflow-x-clip py-12 sm:py-20 md:py-28">
         <ProjectsExplorer
           projects={listItems}
           categories={categories}

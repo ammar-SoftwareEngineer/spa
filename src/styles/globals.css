@@ -395,3 +395,14 @@
 .partners-swiper .swiper-slide {
   height: auto;
 }
+
+/* Lightbox gallery — hide thumbnails on small screens */
+@media (max-width: 639px) {
+  .yarl__thumbnails_container {
+    display: none !important;
+  }
+
+  .yarl__toolbar {
+    padding-inline: 0.5rem;
+  }
+}

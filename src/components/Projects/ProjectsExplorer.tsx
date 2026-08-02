@@ -104,14 +104,14 @@ export default function ProjectsExplorer({
   }
 
   const selectClass =
-    "w-full appearance-none rounded-xl border border-border bg-bg-primary px-4 py-3 pe-10 text-[0.92rem] text-text-primary outline-none transition-[border-color,box-shadow] focus:border-brand focus:shadow-[0_0_0_3px_rgba(33,118,149,0.15)]";
+    "w-full min-h-11 appearance-none rounded-xl border border-border bg-bg-primary px-3 py-2.5 pe-10 text-[0.88rem] text-text-primary outline-none transition-[border-color,box-shadow] focus:border-brand focus:shadow-[0_0_0_3px_rgba(33,118,149,0.15)] sm:px-4 sm:py-3 sm:text-[0.92rem]";
 
   return (
-    <div className="flex flex-col gap-8 md:gap-10">
-      <div className="rounded-[24px] border border-border/70 bg-bg-secondary/60 p-4 shadow-[var(--card-shadow)] backdrop-blur-sm md:p-5">
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
-          <label className="flex flex-col gap-2">
-            <span className="text-[0.78rem] font-bold uppercase tracking-[0.1em] text-text-muted">
+    <div className="flex flex-col gap-6 sm:gap-8 md:gap-10">
+      <div className="rounded-[18px] border border-border/70 bg-bg-secondary/60 p-3 shadow-[var(--card-shadow)] backdrop-blur-sm sm:rounded-[24px] sm:p-4 md:p-5">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 xl:grid-cols-4">
+          <label className="flex flex-col gap-1.5 sm:gap-2">
+            <span className="text-[0.72rem] font-bold uppercase tracking-[0.1em] text-text-muted sm:text-[0.78rem]">
               {t("filters.scope")}
             </span>
             <div className="relative">
@@ -134,8 +134,8 @@ export default function ProjectsExplorer({
             </div>
           </label>
 
-          <label className="flex flex-col gap-2">
-            <span className="text-[0.78rem] font-bold uppercase tracking-[0.1em] text-text-muted">
+          <label className="flex flex-col gap-1.5 sm:gap-2">
+            <span className="text-[0.72rem] font-bold uppercase tracking-[0.1em] text-text-muted sm:text-[0.78rem]">
               {t("filters.sector")}
             </span>
             <div className="relative">
@@ -158,8 +158,8 @@ export default function ProjectsExplorer({
             </div>
           </label>
 
-          <label className="flex flex-col gap-2">
-            <span className="text-[0.78rem] font-bold uppercase tracking-[0.1em] text-text-muted">
+          <label className="flex flex-col gap-1.5 sm:gap-2">
+            <span className="text-[0.72rem] font-bold uppercase tracking-[0.1em] text-text-muted sm:text-[0.78rem]">
               {t("filters.sort")}
             </span>
             <div className="relative">
@@ -181,8 +181,8 @@ export default function ProjectsExplorer({
             </div>
           </label>
 
-          <label className="flex flex-col gap-2">
-            <span className="text-[0.78rem] font-bold uppercase tracking-[0.1em] text-text-muted">
+          <label className="flex flex-col gap-1.5 sm:gap-2">
+            <span className="text-[0.72rem] font-bold uppercase tracking-[0.1em] text-text-muted sm:text-[0.78rem]">
               {t("filters.search")}
             </span>
             <div className="relative">
@@ -203,15 +203,15 @@ export default function ProjectsExplorer({
         </div>
 
         {showProjects ? (
-          <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-border/60 pt-4">
-            <p className="m-0 text-[0.9rem] text-text-secondary">
+          <div className="mt-3 flex flex-wrap items-center justify-between gap-2 border-t border-border/60 pt-3 sm:mt-4 sm:gap-3 sm:pt-4">
+            <p className="m-0 text-[0.85rem] text-text-secondary sm:text-[0.9rem]">
               {t("filters.results", { count: filtered.length })}
             </p>
             {isDirty ? (
               <button
                 type="button"
                 onClick={clearFilters}
-                className="inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-[0.85rem] font-semibold text-brand transition-colors hover:bg-brand/10"
+                className="inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-[0.8rem] font-semibold text-brand transition-colors hover:bg-brand/10 sm:text-[0.85rem]"
               >
                 <X size={14} />
                 {t("filters.clear")}
@@ -225,7 +225,7 @@ export default function ProjectsExplorer({
 
       {showProjects ? (
         filtered.length > 0 ? (
-          <div className="grid grid-cols-12 gap-6 md:gap-7">
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 md:gap-7">
             {filtered.map((project, index) => (
               <ProjectCard
                 key={project.slug}
@@ -242,7 +242,7 @@ export default function ProjectsExplorer({
             ))}
           </div>
         ) : (
-          <p className="rounded-[24px] border border-dashed border-border px-6 py-16 text-center text-text-secondary">
+          <p className="rounded-[20px] border border-dashed border-border px-4 py-12 text-center text-[0.95rem] text-text-secondary sm:rounded-[24px] sm:px-6 sm:py-16">
             {t("filters.empty")}
           </p>
         )
