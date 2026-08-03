@@ -83,6 +83,7 @@ export type ProjectItem = {
   scopeTitleKey: string;
   scopeBodyKey: string;
   gallery: string[];
+  videoUrl?: string;
 };
 
 export type CategoryItem = {

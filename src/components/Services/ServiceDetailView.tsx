@@ -6,7 +6,7 @@ import Reveal from "@/components/ui/Reveal";
 import Section from "@/components/ui/Section";
 import HeaderSection from "@/components/ui/HeaderSection";
 import { Button } from "@/components/ui/Button";
-import ProjectCard from "@/components/Services/ProjectCard";
+import ProjectCard from "@/components/Projects/ProjectCard";
 import { getIcon } from "@/lib/icons";
 import type { ProjectItem, ServiceItem } from "@/types";
 
@@ -97,7 +97,7 @@ export default async function ServiceDetailView({
         />
 
         {projects.length > 0 ? (
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 md:gap-7">
+          <div className="grid grid-cols-1 items-stretch gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 md:gap-7">
             {projects.map((project, index) => (
               <ProjectCard
                 key={project.slug}
@@ -105,6 +105,7 @@ export default async function ServiceDetailView({
                 title={t(project.titleKey)}
                 description={t(project.descKey)}
                 location={t(project.locationKey)}
+                index={index}
                 delay={index * 0.08}
               />
             ))}

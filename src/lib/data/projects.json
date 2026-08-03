@@ -5,9 +5,17 @@
     "descKey": "project1Desc",
     "locationKey": "project1Location",
     "image": "/img/proj-contracting.png",
-    "categorySlugs": ["mep-contracting"],
-    "serviceSlugs": ["mep-contracting", "professional-maintenance"],
-    "sectorSlugs": ["fintech", "banks"],
+    "categorySlugs": [
+      "mep-contracting"
+    ],
+    "serviceSlugs": [
+      "mep-contracting",
+      "professional-maintenance"
+    ],
+    "sectorSlugs": [
+      "fintech",
+      "banks"
+    ],
     "date": "2024-11-15",
     "featured": true,
     "clientKey": "project1Client",
@@ -24,7 +32,8 @@
       "/img/breadcrumb/bc-1.jpg",
       "/img/about/mission.jpg",
       "/img/breadcrumb/bc-2.jpg"
-    ]
+    ],
+    "videoUrl": "/img/SPA-Mansoura.mp4"
   },
   {
     "slug": "heliopolis-tower",
@@ -32,9 +41,19 @@
     "descKey": "project2Desc",
     "locationKey": "project2Location",
     "image": "/img/breadcrumb/hero.jpg",
-    "categorySlugs": ["mep-contracting", "facility-management"],
-    "serviceSlugs": ["mep-contracting", "facility-management", "ict-infrastructure"],
-    "sectorSlugs": ["banks", "fintech"],
+    "categorySlugs": [
+      "mep-contracting",
+      "facility-management"
+    ],
+    "serviceSlugs": [
+      "mep-contracting",
+      "facility-management",
+      "ict-infrastructure"
+    ],
+    "sectorSlugs": [
+      "banks",
+      "fintech"
+    ],
     "date": "2024-12-02",
     "featured": true,
     "clientKey": "project2Client",
@@ -51,7 +70,8 @@
       "/img/breadcrumb/bc-3.jpg",
       "/img/about/mission-1.jpg",
       "/img/about/mission-3.jpg"
-    ]
+    ],
+    "videoUrl": "/img/SPA-Mansoura.mp4"
   },
   {
     "slug": "cairo-datacenter",
@@ -59,9 +79,17 @@
     "descKey": "project3Desc",
     "locationKey": "project3Location",
     "image": "/img/breadcrumb/bc-3.jpg",
-    "categorySlugs": ["mep-contracting"],
-    "serviceSlugs": ["ict-infrastructure", "professional-maintenance", "mep-contracting"],
-    "sectorSlugs": ["datacenters"],
+    "categorySlugs": [
+      "mep-contracting"
+    ],
+    "serviceSlugs": [
+      "ict-infrastructure",
+      "professional-maintenance",
+      "mep-contracting"
+    ],
+    "sectorSlugs": [
+      "datacenters"
+    ],
     "date": "2025-01-10",
     "featured": true,
     "clientKey": "project3Client",
@@ -78,7 +106,8 @@
       "/img/proj-contracting.png",
       "/img/breadcrumb/bc-5.jpg",
       "/img/who-we-are.png"
-    ]
+    ],
+    "videoUrl": "/img/SPA-Mansoura.mp4"
   },
   {
     "slug": "new-admin-capital",
@@ -86,9 +115,16 @@
     "descKey": "project4Desc",
     "locationKey": "project4Location",
     "image": "/img/who-we-are.png",
-    "categorySlugs": ["facility-management"],
-    "serviceSlugs": ["facility-management", "professional-maintenance"],
-    "sectorSlugs": ["ministries"],
+    "categorySlugs": [
+      "facility-management"
+    ],
+    "serviceSlugs": [
+      "facility-management",
+      "professional-maintenance"
+    ],
+    "sectorSlugs": [
+      "ministries"
+    ],
     "date": "2024-09-20",
     "featured": false,
     "clientKey": "project4Client",
@@ -105,7 +141,8 @@
       "/img/breadcrumb/bc-2.jpg",
       "/img/about/mission-2.jpg",
       "/img/breadcrumb/hero.jpg"
-    ]
+    ],
+    "videoUrl": "/img/SPA-Mansoura.mp4"
   },
   {
     "slug": "airport-facility",
@@ -113,9 +150,18 @@
     "descKey": "project5Desc",
     "locationKey": "project5Location",
     "image": "/img/proj-firefighting.png",
-    "categorySlugs": ["mep-contracting", "facility-management"],
-    "serviceSlugs": ["mep-contracting", "facility-management", "professional-maintenance"],
-    "sectorSlugs": ["airports"],
+    "categorySlugs": [
+      "mep-contracting",
+      "facility-management"
+    ],
+    "serviceSlugs": [
+      "mep-contracting",
+      "facility-management",
+      "professional-maintenance"
+    ],
+    "sectorSlugs": [
+      "airports"
+    ],
     "date": "2024-08-12",
     "featured": false,
     "clientKey": "project5Client",
@@ -132,7 +178,8 @@
       "/img/about/mission-3.jpg",
       "/img/breadcrumb/bc-1.jpg",
       "/img/about/mission-1.jpg"
-    ]
+    ],
+    "videoUrl": "/img/SPA-Mansoura.mp4"
   },
   {
     "slug": "bank-hq-fitout",
@@ -140,9 +187,16 @@
     "descKey": "project6Desc",
     "locationKey": "project6Location",
     "image": "/img/about/mission-2.jpg",
-    "categorySlugs": ["mep-contracting"],
-    "serviceSlugs": ["ict-infrastructure", "mep-contracting"],
-    "sectorSlugs": ["banks"],
+    "categorySlugs": [
+      "mep-contracting"
+    ],
+    "serviceSlugs": [
+      "ict-infrastructure",
+      "mep-contracting"
+    ],
+    "sectorSlugs": [
+      "banks"
+    ],
     "date": "2024-10-05",
     "featured": true,
     "clientKey": "project6Client",
@@ -159,7 +213,8 @@
       "/img/about/mission-4.jpg",
       "/img/breadcrumb/hero.jpg",
       "/img/breadcrumb/bc-4.jpg"
-    ]
+    ],
+    "videoUrl": "/img/SPA-Mansoura.mp4"
   },
   {
     "slug": "hospital-complex",
@@ -167,9 +222,19 @@
     "descKey": "project7Desc",
     "locationKey": "project7Location",
     "image": "/img/breadcrumb/bc-5.jpg",
-    "categorySlugs": ["facility-management", "mep-contracting"],
-    "serviceSlugs": ["facility-management", "mep-contracting", "professional-maintenance"],
-    "sectorSlugs": ["ministries", "schools"],
+    "categorySlugs": [
+      "facility-management",
+      "mep-contracting"
+    ],
+    "serviceSlugs": [
+      "facility-management",
+      "mep-contracting",
+      "professional-maintenance"
+    ],
+    "sectorSlugs": [
+      "ministries",
+      "schools"
+    ],
     "date": "2024-07-18",
     "featured": false,
     "clientKey": "project7Client",
@@ -186,7 +251,8 @@
       "/img/who-we-are.png",
       "/img/about/mission-3.jpg",
       "/img/proj-contracting.png"
-    ]
+    ],
+    "videoUrl": "/img/SPA-Mansoura.mp4"
   },
   {
     "slug": "telecom-hub",
@@ -194,9 +260,17 @@
     "descKey": "project8Desc",
     "locationKey": "project8Location",
     "image": "/img/breadcrumb/bc-4.jpg",
-    "categorySlugs": ["mep-contracting"],
-    "serviceSlugs": ["ict-infrastructure", "professional-maintenance"],
-    "sectorSlugs": ["telecom", "datacenters"],
+    "categorySlugs": [
+      "mep-contracting"
+    ],
+    "serviceSlugs": [
+      "ict-infrastructure",
+      "professional-maintenance"
+    ],
+    "sectorSlugs": [
+      "telecom",
+      "datacenters"
+    ],
     "date": "2024-12-20",
     "featured": false,
     "clientKey": "project8Client",
@@ -213,6 +287,7 @@
       "/img/about/mission-1.jpg",
       "/img/breadcrumb/bc-1.jpg",
       "/img/about/mission-4.jpg"
-    ]
+    ],
+    "videoUrl": "/img/SPA-Mansoura.mp4"
   }
 ]

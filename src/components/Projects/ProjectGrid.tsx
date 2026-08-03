@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import ProjectCard from "@/components/Services/ProjectCard";
+import ProjectCard from "@/components/Projects/ProjectCard";
 import type { ProjectListItem } from "@/components/Projects/types";
 
 type ProjectGridProps = {
@@ -20,7 +20,7 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
   }
 
   return (
-    <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 md:gap-7">
+    <div className="grid grid-cols-1 items-stretch gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 md:gap-7">
       {projects.map((project, index) => (
         <ProjectCard
           key={project.slug}
@@ -32,6 +32,7 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
             ...project.categoryLabels.slice(0, 1),
             ...project.sectorLabels.slice(0, 1),
           ]}
+          index={index}
           delay={Math.min(index, 8) * 0.06}
         />
       ))}

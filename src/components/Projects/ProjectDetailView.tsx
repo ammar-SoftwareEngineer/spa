@@ -1,8 +1,9 @@
 import Image from "next/image";
-import { getLocale, getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import Reveal from "@/components/ui/Reveal";
 import ProjectGallery from "@/components/Projects/ProjectGallery";
+import ProjectVideo from "@/components/Projects/ProjectVideo";
 import { getCategories } from "@/lib/api/categories";
 import { getSectors } from "@/lib/api/sectors";
 import type { ProjectItem } from "@/types";
@@ -201,6 +202,14 @@ export default async function ProjectDetailView({ project }: ProjectDetailViewPr
           </div>
         </div>
       </section>
+
+      {project.videoUrl ? (
+        <ProjectVideo
+          url={project.videoUrl}
+          title={t("detail.video")}
+          iframeTitle={`${title} — ${t("detail.video")}`}
+        />
+      ) : null}
 
       <ProjectGallery images={project.gallery} title={t("detail.gallery")} />
     </div>
