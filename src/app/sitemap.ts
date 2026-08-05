@@ -1,0 +1,62 @@
+/**
+ * sitemap.xml — قائمة صفحات الموقع لمحركات البحث
+ * بتتولد تلقائياً من Next.js على /sitemap.xml
+ */
+import type { MetadataRoute } from "next";
+import { getBaseUrl } from "@/lib/utils";
+import { routing } from "@/i18n/routing";
+import { getProductSlugs } from "@/lib/api/products";
+import { getProjectSlugs } from "@/lib/api/projects";
+import { getServiceSlugs } from "@/lib/api/services";
+import { getCategorySlugs } from "@/lib/api/categories";
+
+const staticPaths = [
+  "",
+  "/about",
+  "/contact",
+  "/partners",
+  "/portfolio",
+  "/products",
+  "/projects",
+  "/services",
+  "/team",
+];
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const base = getBaseUrl();
+  const [productSlugs, projectSlugs, serviceSlugs, categorySlugs] = await Promise.all([
+    getProductSlugs(),
+    getProjectSlugs(),
+    getServiceSlugs(),
+    getCategorySlugs(),
+  ]);
+
+  const dynamicPaths = [
+    ...productSlugs.map((slug) => `/products/${slug}`),
+    ...projectSlugs.map((slug) => `/projects/${slug}`),
+    ...serviceSlugs.map((slug) => `/services/${slug}`),
+    ...categorySlugs.map((slug) => `/projects/${slug}`),
+  ];
+
+  const allPaths = [...staticPaths, ...dynamicPaths];
+  const entries: MetadataRoute.Sitemap = [];
+
+  for (const locale of routing.locales) {
+    for (const path of allPaths) {
+      const url = `${base}/${locale}${path}`;
+      entries.push({
+        url,
+        lastModified: new Date(),
+        changeFrequency: path === "" ? "weekly" : "monthly",
+        priority: path === "" ? 1 : 0.7,
+        alternates: {
+          languages: Object.fromEntries(
+            routing.locales.map((loc) => [loc, `${base}/${loc}${path}`])
+          ),
+        },
+      });
+    }
+  }
+
+  return entries;
+}

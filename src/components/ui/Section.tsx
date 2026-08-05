@@ -1,3 +1,8 @@
+/**
+ * Section — سكشن صفحة مع خلفية اختيارية و Container داخلي
+ */
+import Container from "@/components/ui/Container";
+
 type SectionProps = React.ComponentPropsWithoutRef<"section"> & {
   variant?: "base" | "alt";
   containerClassName?: string;
@@ -19,12 +24,10 @@ export default function Section({
   return (
     <section
       id={id}
-      className={`relative z-[1] px-4 md:px-6 ${variantClass[variant]} ${className}`.trim()}
+      className={`relative z-[1] ${variantClass[variant]} ${className}`.trim()}
       {...props}
     >
-      <div className={`container mx-auto w-full md:px-10 lg:px-20 ${containerClassName}`.trim()}>
-        {children}
-      </div>
+      <Container className={containerClassName}>{children}</Container>
     </section>
   );
 }

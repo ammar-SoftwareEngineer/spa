@@ -26,7 +26,7 @@ export default function ProductCard({
     <Reveal delay={delay} className="h-full w-full">
       <Link
         href={`/products/${product.slug}`}
-        className="group relative flex h-full min-h-[380px] w-full flex-col overflow-hidden rounded-[24px] outline-none transition-[transform,box-shadow] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 sm:min-h-[420px] shadow-[0_14px_40px_rgba(13,59,77,0.14)] hover:shadow-[0_24px_56px_rgba(33,118,149,0.22)]"
+        className="group relative flex h-full min-h-[320px] w-full flex-col overflow-hidden rounded-[24px] outline-none transition-[transform,box-shadow] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 sm:min-h-[380px] shadow-[0_14px_40px_rgba(13,59,77,0.14)] hover:shadow-[0_24px_56px_rgba(33,118,149,0.22)]"
       >
         <Image
           src={product.image}

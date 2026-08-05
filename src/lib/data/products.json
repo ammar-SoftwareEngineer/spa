@@ -6,38 +6,243 @@
     "descKey": "afcDesc",
     "detailKey": "afcDetail",
     "image": "/img/proj-firefighting.png",
-    "website": "https://american-afc.com/store/",
-    "featureKeys": ["afcFeature1", "afcFeature2", "afcFeature3"],
+    "website": "https://american-afc.com/",
+    "featureKeys": [
+      "afcFeature1",
+      "afcFeature2",
+      "afcFeature3",
+      "afcFeature4"
+    ],
     "lines": [
       {
-        "titleKey": "afcLineValvesTitle",
-        "descKey": "afcLineValvesDesc",
-        "image": "/img/proj-firefighting.png"
+        "titleKey": "afcProd_alarm_check_valveTitle",
+        "descKey": "afcProd_alarm_check_valveDesc",
+        "image": "/img/products/afc/alarm-check-valve.png"
       },
       {
-        "titleKey": "afcLineHydrantsTitle",
-        "descKey": "afcLineHydrantsDesc",
-        "image": "/img/article-fire-safety.png"
+        "titleKey": "afcProd_angle_hose_valveTitle",
+        "descKey": "afcProd_angle_hose_valveDesc",
+        "image": "/img/products/afc/angle-hose-valve.jpg"
       },
       {
-        "titleKey": "afcLineSuppressionTitle",
-        "descKey": "afcLineSuppressionDesc",
-        "image": "/img/breadcrumb/bc-2.jpg"
+        "titleKey": "afcProd_swing_check_valveTitle",
+        "descKey": "afcProd_swing_check_valveDesc",
+        "image": "/img/products/afc/swing-check-valve.png"
       },
       {
-        "titleKey": "afcLineConnectionsTitle",
-        "descKey": "afcLineConnectionsDesc",
-        "image": "/img/breadcrumb/bc-1.jpg"
+        "titleKey": "afcProd_grooved_butterfly_valveTitle",
+        "descKey": "afcProd_grooved_butterfly_valveDesc",
+        "image": "/img/products/afc/grooved-butterfly-valve.png"
       },
       {
-        "titleKey": "afcLineHosesTitle",
-        "descKey": "afcLineHosesDesc",
-        "image": "/img/about/mission-2.jpg"
+        "titleKey": "afcProd_grooved_check_valveTitle",
+        "descKey": "afcProd_grooved_check_valveDesc",
+        "image": "/img/products/afc/grooved-check-valve.png"
       },
       {
-        "titleKey": "afcLineExtinguishersTitle",
-        "descKey": "afcLineExtinguishersDesc",
-        "image": "/img/about/mission-3.jpg"
+        "titleKey": "afcProd_nrs_gate_valveTitle",
+        "descKey": "afcProd_nrs_gate_valveDesc",
+        "image": "/img/products/afc/nrs-gate-valve.png"
+      },
+      {
+        "titleKey": "afcProd_osy_flanged_gate_valveTitle",
+        "descKey": "afcProd_osy_flanged_gate_valveDesc",
+        "image": "/img/products/afc/osy-flanged-gate-valve.png"
+      },
+      {
+        "titleKey": "afcProd_grooved_osy_gate_valveTitle",
+        "descKey": "afcProd_grooved_osy_gate_valveDesc",
+        "image": "/img/products/afc/grooved-osy-gate-valve.png"
+      },
+      {
+        "titleKey": "afcProd_pressure_restricting_angle_valveTitle",
+        "descKey": "afcProd_pressure_restricting_angle_valveDesc",
+        "image": "/img/products/afc/pressure-restricting-angle-valve.jpg"
+      },
+      {
+        "titleKey": "afcProd_test_and_drain_valveTitle",
+        "descKey": "afcProd_test_and_drain_valveDesc",
+        "image": "/img/products/afc/test-and-drain-valve.jpg"
+      },
+      {
+        "titleKey": "afcProd_post_indicatorTitle",
+        "descKey": "afcProd_post_indicatorDesc",
+        "image": "/img/products/afc/post-indicator.png"
+      },
+      {
+        "titleKey": "afcProd_wafer_type_butterfly_valveTitle",
+        "descKey": "afcProd_wafer_type_butterfly_valveDesc",
+        "image": "/img/products/afc/wafer-type-butterfly-valve.jpg"
+      },
+      {
+        "titleKey": "afcProd_wall_indicator_postTitle",
+        "descKey": "afcProd_wall_indicator_postDesc",
+        "image": "/img/products/afc/wall-indicator-post.jpg"
+      },
+      {
+        "titleKey": "afcProd_exposed_inlet_fire_dept_connectionTitle",
+        "descKey": "afcProd_exposed_inlet_fire_dept_connectionDesc",
+        "image": "/img/products/afc/exposed-inlet-fire-dept-connection.jpg"
+      },
+      {
+        "titleKey": "afcProd_exposed_outlet_connectionTitle",
+        "descKey": "afcProd_exposed_outlet_connectionDesc",
+        "image": "/img/products/afc/exposed-outlet-connection.jpg"
+      },
+      {
+        "titleKey": "afcProd_exposed_wall_hydrant_connectionTitle",
+        "descKey": "afcProd_exposed_wall_hydrant_connectionDesc",
+        "image": "/img/products/afc/exposed-wall-hydrant-connection.jpg"
+      },
+      {
+        "titleKey": "afcProd_fire_department_connectionTitle",
+        "descKey": "afcProd_fire_department_connectionDesc",
+        "image": "/img/products/afc/fire-department-connection.png"
+      },
+      {
+        "titleKey": "afcProd_flush_inlet_fire_dept_connection_clapperedTitle",
+        "descKey": "afcProd_flush_inlet_fire_dept_connection_clapperedDesc",
+        "image": "/img/products/afc/flush-inlet-fire-dept-connection-clappered.jpg"
+      },
+      {
+        "titleKey": "afcProd_flush_mount_wall_hydrantTitle",
+        "descKey": "afcProd_flush_mount_wall_hydrantDesc",
+        "image": "/img/products/afc/flush-mount-wall-hydrant.jpeg"
+      },
+      {
+        "titleKey": "afcProd_free_standing_inlet_fire_dept_connectionTitle",
+        "descKey": "afcProd_free_standing_inlet_fire_dept_connectionDesc",
+        "image": "/img/products/afc/free-standing-inlet-fire-dept-connection.jpg"
+      },
+      {
+        "titleKey": "afcProd_free_standing_outlet_connectionTitle",
+        "descKey": "afcProd_free_standing_outlet_connectionDesc",
+        "image": "/img/products/afc/free-standing-outlet-connection.jpg"
+      },
+      {
+        "titleKey": "afcProd_free_standing_test_header_connectionTitle",
+        "descKey": "afcProd_free_standing_test_header_connectionDesc",
+        "image": "/img/products/afc/free-standing-test-header-connection.jpg"
+      },
+      {
+        "titleKey": "afcProd_single_inlet_fire_dept_connectionTitle",
+        "descKey": "afcProd_single_inlet_fire_dept_connectionDesc",
+        "image": "/img/products/afc/single-inlet-fire-dept-connection.jpg"
+      },
+      {
+        "titleKey": "afcProd_single_wall_hydrant_connectionTitle",
+        "descKey": "afcProd_single_wall_hydrant_connectionDesc",
+        "image": "/img/products/afc/single-wall-hydrant-connection.jpg"
+      },
+      {
+        "titleKey": "afcProd_dry_barrel_hydrantTitle",
+        "descKey": "afcProd_dry_barrel_hydrantDesc",
+        "image": "/img/products/afc/dry-barrel-hydrant.png"
+      },
+      {
+        "titleKey": "afcProd_free_standing_hydrant_test_headeTitle",
+        "descKey": "afcProd_free_standing_hydrant_test_headeDesc",
+        "image": "/img/products/afc/free-standing-hydrant-test-heade.jpg"
+      },
+      {
+        "titleKey": "afcProd_hydrant_control_valvesTitle",
+        "descKey": "afcProd_hydrant_control_valvesDesc",
+        "image": "/img/products/afc/hydrant-control-valves.jpg"
+      },
+      {
+        "titleKey": "afcProd_wet_barrel_hydrantTitle",
+        "descKey": "afcProd_wet_barrel_hydrantDesc",
+        "image": "/img/products/afc/wet-barrel-hydrant.jpg"
+      },
+      {
+        "titleKey": "afcProd_booster_hoseTitle",
+        "descKey": "afcProd_booster_hoseDesc",
+        "image": "/img/products/afc/booster-hose.jpg"
+      },
+      {
+        "titleKey": "afcProd_double_jacket_fire_hoseTitle",
+        "descKey": "afcProd_double_jacket_fire_hoseDesc",
+        "image": "/img/products/afc/double-jacket-fire-hose.jpg"
+      },
+      {
+        "titleKey": "afcProd_forestry_hoseTitle",
+        "descKey": "afcProd_forestry_hoseDesc",
+        "image": "/img/products/afc/forestry-hose.jpg"
+      },
+      {
+        "titleKey": "afcProd_ldh_double_jacketTitle",
+        "descKey": "afcProd_ldh_double_jacketDesc",
+        "image": "/img/products/afc/ldh-double-jacket.jpg"
+      },
+      {
+        "titleKey": "afcProd_rack_hoseTitle",
+        "descKey": "afcProd_rack_hoseDesc",
+        "image": "/img/products/afc/rack-hose.jpg"
+      },
+      {
+        "titleKey": "afcProd_rubber_covered_fire_hoseTitle",
+        "descKey": "afcProd_rubber_covered_fire_hoseDesc",
+        "image": "/img/products/afc/rubber-covered-fire-hose.jpg"
+      },
+      {
+        "titleKey": "afcProd_single_jacket_fire_hoseTitle",
+        "descKey": "afcProd_single_jacket_fire_hoseDesc",
+        "image": "/img/products/afc/single-jacket-fire-hose.jpg"
+      },
+      {
+        "titleKey": "afcProd_carbon_dioxideTitle",
+        "descKey": "afcProd_carbon_dioxideDesc",
+        "image": "/img/products/afc/carbon-dioxide.jpg"
+      },
+      {
+        "titleKey": "afcProd_dry_chemical_abc_typeTitle",
+        "descKey": "afcProd_dry_chemical_abc_typeDesc",
+        "image": "/img/products/afc/dry-chemical-abc-type.jpg"
+      },
+      {
+        "titleKey": "afcProd_halotronTitle",
+        "descKey": "afcProd_halotronDesc",
+        "image": "/img/products/afc/halotron.jpg"
+      },
+      {
+        "titleKey": "afcProd_water_and_water_mistTitle",
+        "descKey": "afcProd_water_and_water_mistDesc",
+        "image": "/img/products/afc/water-and-water-mist.jpg"
+      },
+      {
+        "titleKey": "afcProd_wet_chemical_k_typeTitle",
+        "descKey": "afcProd_wet_chemical_k_typeDesc",
+        "image": "/img/products/afc/wet-chemical-k-type.jpg"
+      },
+      {
+        "titleKey": "afcProd_wheeled_extinguishersTitle",
+        "descKey": "afcProd_wheeled_extinguishersDesc",
+        "image": "/img/products/afc/wheeled-extinguishers.jpg"
+      },
+      {
+        "titleKey": "afcProd_water_flow_switchTitle",
+        "descKey": "afcProd_water_flow_switchDesc",
+        "image": "/img/products/afc/water-flow-switch.jpg"
+      },
+      {
+        "titleKey": "afcProd_afc_227_2Title",
+        "descKey": "afcProd_afc_227_2Desc",
+        "image": "/img/products/afc/afc-227-2.jpg"
+      },
+      {
+        "titleKey": "afcProd_afc_5112Title",
+        "descKey": "afcProd_afc_5112Desc",
+        "image": "/img/products/afc/afc-5112.png"
+      },
+      {
+        "titleKey": "afcProd_afc_p227Title",
+        "descKey": "afcProd_afc_p227Desc",
+        "image": "/img/products/afc/afc-p227.jpg"
+      },
+      {
+        "titleKey": "afcProd_kitchen_fire_suppression_systemTitle",
+        "descKey": "afcProd_kitchen_fire_suppression_systemDesc",
+        "image": "/img/products/afc/kitchen-fire-suppression-system.jpeg"
       }
     ]
   },
@@ -49,7 +254,11 @@
     "detailKey": "honeywellDetail",
     "image": "/img/breadcrumb/bc-3.jpg",
     "website": "https://www.honeywell.com/us/en",
-    "featureKeys": ["honeywellFeature1", "honeywellFeature2", "honeywellFeature3"],
+    "featureKeys": [
+      "honeywellFeature1",
+      "honeywellFeature2",
+      "honeywellFeature3"
+    ],
     "lines": [
       {
         "titleKey": "honeywellLineBuildingsTitle",
@@ -81,7 +290,11 @@
     "detailKey": "spaDetail",
     "image": "/img/who-we-are.png",
     "website": "https://www.spacorp-eg.com/",
-    "featureKeys": ["spaFeature1", "spaFeature2", "spaFeature3"],
+    "featureKeys": [
+      "spaFeature1",
+      "spaFeature2",
+      "spaFeature3"
+    ],
     "lines": [
       {
         "titleKey": "spaLineMepTitle",

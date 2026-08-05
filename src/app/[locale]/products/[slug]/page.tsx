@@ -4,7 +4,6 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import ProductDetailView from "@/components/Products/ProductDetailView";
 import { getProductBySlug, getProductSlugs } from "@/lib/api/products";
 
-export const dynamic = "force-dynamic";
 
 export async function generateStaticParams() {
   const slugs = await getProductSlugs();
@@ -33,8 +32,10 @@ export async function generateMetadata({
 
 export default async function ProductDetailsPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ locale: string; slug: string }>;
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
@@ -44,5 +45,9 @@ export default async function ProductDetailsPage({
     notFound();
   }
 
-  return <ProductDetailView product={product} />;
+  const q = await searchParams;
+  const rawPage = Array.isArray(q.page) ? q.page[0] : q.page;
+  const page = Number(rawPage) || 1;
+
+  return <ProductDetailView product={product} page={page} />;
 }

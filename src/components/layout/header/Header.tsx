@@ -1,3 +1,7 @@
+/**
+ * Header — الشريط العلوي الثابت (لوجو + تنقل + ثيم/لغة)
+ * المنطق هنا، والعرض مقسوم على DesktopNav / MobileNav / HeaderActions
+ */
 "use client";
 
 import { useEffect, useState } from "react";
@@ -5,7 +9,10 @@ import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { getTheme, toggleTheme as switchTheme, type Theme } from "@/lib/theme";
 import { Link, usePathname, useRouter } from "@/i18n/navigation";
-import { Sun, Moon, Globe, Menu, X, ChevronDown } from "lucide-react";
+import Container from "@/components/ui/Container";
+import DesktopNav from "@/components/layout/header/DesktopNav";
+import MobileNav from "@/components/layout/header/MobileNav";
+import HeaderActions from "@/components/layout/header/HeaderActions";
 import type { NavItem } from "@/types";
 
 type HeaderProps = {
@@ -18,6 +25,7 @@ export default function Header({ navItems, logoSrc }: HeaderProps) {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
+
   const [theme, setTheme] = useState<Theme>("dark");
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -28,6 +36,7 @@ export default function Header({ navItems, logoSrc }: HeaderProps) {
     setTheme(getTheme());
   }, []);
 
+  // زجاج الشريط بعد السكرول
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 50);
     onScroll();
@@ -35,6 +44,7 @@ export default function Header({ navItems, logoSrc }: HeaderProps) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // منع سكرول الصفحة لما المنيو مفتوحة
   useEffect(() => {
     document.body.style.overflow = isMobileMenuOpen ? "hidden" : "";
     return () => {
@@ -42,6 +52,7 @@ export default function Header({ navItems, logoSrc }: HeaderProps) {
     };
   }, [isMobileMenuOpen]);
 
+  // إغلاق المنيوهات عند تغيير الصفحة
   useEffect(() => {
     setIsMobileMenuOpen(false);
     setOpenDesktopDropdown(null);
@@ -51,8 +62,6 @@ export default function Header({ navItems, logoSrc }: HeaderProps) {
   const switchLocale = () => {
     router.replace(pathname, { locale: locale === "ar" ? "en" : "ar" });
   };
-
-  const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   const isChildActive = (item: NavItem) =>
     item.children?.some(
@@ -95,8 +104,8 @@ export default function Header({ navItems, logoSrc }: HeaderProps) {
             : "bg-transparent"
         }`}
       >
-        <div
-          className={`mx-auto flex w-full container items-center justify-between px-5 md:px-10 lg:px-20 ${
+        <Container
+          className={`flex items-center justify-between px-5 ${
             isScrolled ? "h-[70px] md:h-20" : "h-[70px] md:h-[90px]"
           }`}
         >
@@ -111,179 +120,41 @@ export default function Header({ navItems, logoSrc }: HeaderProps) {
             />
           </Link>
 
-          <ul className="hidden list-none items-center gap-6 lg:flex">
-            {navItems.map((item) => {
-              const hasChildren = Boolean(item.children?.length);
-              const isOpen = openDesktopDropdown === item.key;
+          <DesktopNav
+            navItems={navItems}
+            pathname={pathname}
+            openKey={openDesktopDropdown}
+            onOpen={setOpenDesktopDropdown}
+            label={t}
+            isItemActive={isItemActive}
+            navLinkBase={navLinkBase}
+            navLinkIdle={navLinkIdle}
+            navLinkActive={navLinkActive}
+          />
 
-              if (!hasChildren) {
-                return (
-                  <li key={item.key}>
-                    <Link href={item.href} className={`${navLinkBase} ${navLinkIdle}`}>
-                      {t(item.key)}
-                    </Link>
-                  </li>
-                );
-              }
-
-              return (
-                <li
-                  key={item.key}
-                  className="relative"
-                  onMouseEnter={() => setOpenDesktopDropdown(item.key)}
-                  onMouseLeave={() => setOpenDesktopDropdown(null)}
-                >
-                  <button
-                    type="button"
-                    className={`${navLinkBase} flex cursor-pointer items-center gap-1 ${
-                      isOpen || isItemActive(item) ? navLinkActive : navLinkIdle
-                    }`}
-                    aria-expanded={isOpen}
-                    aria-haspopup="true"
-                  >
-                    {t(item.key)}
-                    <ChevronDown
-                      size={14}
-                      className={`transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
-                    />
-                  </button>
-
-                  <div
-                    className={`absolute start-0 top-full z-50 pt-2 transition-opacity duration-200 ${
-                      isOpen
-                        ? "pointer-events-auto opacity-100"
-                        : "pointer-events-none opacity-0"
-                    }`}
-                  >
-                    <ul className="grid min-w-[200px] list-none gap-2 rounded-[18px] border border-border bg-bg-primary py-2 shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
-                      {item.children!.map((child) => {
-                        const active =
-                          pathname === child.href ||
-                          (child.href !== item.href &&
-                            child.href !== "/" &&
-                            pathname.startsWith(`${child.href}/`));
-                        return (
-                          <li key={child.key}>
-                            <Link
-                              href={child.href}
-                              className={`relative mx-3 block whitespace-nowrap py-2.5 text-[0.9rem] font-medium transition-all after:absolute after:bottom-0 after:start-0 after:h-0.5 after:w-full after:bg-brand after:transition-transform after:duration-300 ${
-                                active
-                                  ? "text-brand after:scale-x-100"
-                                  : "text-text-primary after:origin-end after:scale-x-0 hover:text-brand hover:after:origin-start hover:after:scale-x-100"
-                              }`}
-                            >
-                              {t(child.key)}
-                            </Link>
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  </div>
-                </li>
-              );
-            })}
-          </ul>
-
-          <div className="relative z-[1002] flex items-center gap-2 lg:gap-4">
-            <button
-              type="button"
-              onClick={() => setTheme(switchTheme())}
-              className={`flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border bg-transparent transition-all hover:scale-105 ${actionBtnTone}`}
-              aria-label="Toggle Theme"
-              title={theme === "light" ? "Dark Mode" : "Light Mode"}
-            >
-              {theme === "light" ? <Moon size={18} /> : <Sun size={18} />}
-            </button>
-
-            <button
-              type="button"
-              onClick={switchLocale}
-              className={`flex h-10 cursor-pointer items-center justify-center gap-1.5 rounded-full border bg-transparent px-3 text-[0.85rem] font-semibold transition-all hover:scale-105 ${actionBtnTone}`}
-              aria-label="Toggle Language"
-            >
-              <Globe size={16} />
-              <span>{locale === "ar" ? "EN" : "العربية"}</span>
-            </button>
-
-            <button
-              type="button"
-              onClick={() => setIsMobileMenuOpen((open) => !open)}
-              className={`flex h-10 w-10 items-center justify-center bg-transparent lg:hidden ${
-                useWhiteLinks ? "text-white" : "text-text-primary"
-              }`}
-              aria-label="Toggle Mobile Menu"
-              aria-expanded={isMobileMenuOpen}
-            >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
-        </div>
+          <HeaderActions
+            theme={theme}
+            actionBtnTone={actionBtnTone}
+            useWhiteLinks={useWhiteLinks}
+            isMobileMenuOpen={isMobileMenuOpen}
+            localeLabel={locale === "ar" ? "EN" : "العربية"}
+            onToggleTheme={() => setTheme(switchTheme())}
+            onSwitchLocale={switchLocale}
+            onToggleMobileMenu={() => setIsMobileMenuOpen((open) => !open)}
+          />
+        </Container>
       </header>
 
-      <div
-        className={`fixed inset-0 z-[999] flex flex-col items-center justify-center bg-bg-primary p-10 transition-[opacity,transform] duration-500 lg:hidden ${
-          isMobileMenuOpen
-            ? "pointer-events-auto translate-x-0 opacity-100"
-            : "pointer-events-none translate-x-full opacity-0 rtl:-translate-x-full"
-        }`}
-        aria-hidden={!isMobileMenuOpen}
-      >
-        <ul className="flex w-full max-w-sm list-none flex-col items-center gap-6">
-          {navItems.map((item) => {
-            const hasChildren = Boolean(item.children?.length);
-            const isOpen = openMobileDropdown === item.key;
-
-            if (!hasChildren) {
-              return (
-                <li key={item.key}>
-                  <Link
-                    href={item.href}
-                    className="text-[1.8rem] font-bold text-text-primary transition-colors hover:text-brand ltr:font-[family-name:var(--font-bebas-neue)] ltr:tracking-wider rtl:font-[family-name:var(--font-cairo)]"
-                    onClick={closeMobileMenu}
-                  >
-                    {t(item.key)}
-                  </Link>
-                </li>
-              );
-            }
-
-            return (
-              <li key={item.key} className="flex w-full flex-col items-center gap-2">
-                <button
-                  type="button"
-                  onClick={() =>
-                    setOpenMobileDropdown((current) => (current === item.key ? null : item.key))
-                  }
-                  className="flex items-center gap-2 text-[1.8rem] font-bold text-text-primary transition-colors hover:text-brand ltr:font-[family-name:var(--font-bebas-neue)] ltr:tracking-wider rtl:font-[family-name:var(--font-cairo)]"
-                  aria-expanded={isOpen}
-                >
-                  {t(item.key)}
-                  <ChevronDown
-                    size={18}
-                    className={`transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
-                  />
-                </button>
-
-                {isOpen ? (
-                  <ul className="flex list-none flex-col items-center gap-1">
-                    {item.children!.map((child) => (
-                      <li key={child.key}>
-                        <Link
-                          href={child.href}
-                          className="relative block py-2 text-[1.05rem] text-text-secondary transition-all after:absolute after:bottom-0 after:start-0 after:h-0.5 after:w-full after:origin-end after:scale-x-0 after:bg-brand after:transition-transform after:duration-300 hover:text-brand hover:after:origin-start hover:after:scale-x-100"
-                          onClick={closeMobileMenu}
-                        >
-                          {t(child.key)}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                ) : null}
-              </li>
-            );
-          })}
-        </ul>
-      </div>
+      <MobileNav
+        navItems={navItems}
+        isOpen={isMobileMenuOpen}
+        openDropdownKey={openMobileDropdown}
+        onToggleDropdown={(key) =>
+          setOpenMobileDropdown((current) => (current === key ? null : key))
+        }
+        onClose={() => setIsMobileMenuOpen(false)}
+        label={t}
+      />
     </>
   );
 }

@@ -1,6 +1,8 @@
+/**
+ * MediaContentBlock — بلوك صورة + نص جنب بعض (About / Mission / Vision)
+ */
 import Image from "next/image";
 import Reveal from "@/components/ui/Reveal";
-import { getIcon } from "@/lib/icons";
 
 export type MediaContentBlockProps = {
   imageSrc: string;
@@ -9,7 +11,6 @@ export type MediaContentBlockProps = {
   title: string;
   text: string;
   reverse?: boolean;
-  badgeIcon?: string;
 };
 
 export default function MediaContentBlock({
@@ -19,25 +20,22 @@ export default function MediaContentBlock({
   title,
   text,
   reverse = false,
-  badgeIcon,
 }: MediaContentBlockProps) {
-  const BadgeIcon = badgeIcon ? getIcon(badgeIcon) : null;
-
   return (
     <div className="grid grid-cols-12 items-center gap-8 lg:gap-16">
       <Reveal
         className={`relative col-span-12 md:col-span-6 ${reverse ? "md:order-2" : ""}`}
       >
-        <div className="group relative mx-auto h-125 overflow-hidden rounded-[28px] border border-border">
+        <div className="group relative mx-auto aspect-[4/3] w-full overflow-hidden rounded-[28px] border border-border md:aspect-[5/4]">
           <Image
             src={imageSrc}
             alt={imageAlt}
             fill
-            className="object-cover transition-transform duration-700 group-hover:scale-[1.03] w-full h-full"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
             priority={!reverse}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0d3b4d]/55 via-transparent to-transparent" />
-         
         </div>
       </Reveal>
 

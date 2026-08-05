@@ -10,6 +10,7 @@ const loaders = {
     services: () => import("../../messages/ar/services.json"),
     projects: () => import("../../messages/ar/projects.json"),
     products: () => import("../../messages/ar/products.json"),
+    portfolio: () => import("../../messages/ar/portfolio.json"),
     partners: () => import("../../messages/ar/partners.json"),
   },
   en: {
@@ -21,6 +22,7 @@ const loaders = {
     services: () => import("../../messages/en/services.json"),
     projects: () => import("../../messages/en/projects.json"),
     products: () => import("../../messages/en/products.json"),
+    portfolio: () => import("../../messages/en/portfolio.json"),
     partners: () => import("../../messages/en/partners.json"),
   },
 } as const;
@@ -37,6 +39,7 @@ const loadOrder: ModuleName[] = [
   "services",
   "projects",
   "products",
+  "portfolio",
   "partners",
 ];
 

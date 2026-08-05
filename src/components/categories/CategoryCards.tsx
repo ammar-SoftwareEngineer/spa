@@ -1,5 +1,6 @@
-"use client";
-
+/**
+ * CategoryCards — شبكة كروت التصنيفات
+ */
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import Reveal from "@/components/ui/Reveal";
@@ -21,17 +22,15 @@ type Props = {
 
 export default function CategoryCards({ categories }: Props) {
   return (
-    <div className="grid w-full grid-cols-1 gap-5 sm:gap-6 lg:grid-cols-2 lg:gap-8">
-      {categories.map((category, index) => (
-        <Reveal
-          key={category.title}
-          delay={index * 0.08}
-          className={index === 1 ? "lg:mt-12" : undefined}
-        >
-          <CategoryCard category={category} />
-        </Reveal>
-      ))}
-    </div>
+    <Reveal>
+      <div className="grid w-full grid-cols-1 gap-5 sm:gap-6 lg:grid-cols-2 lg:gap-8">
+        {categories.map((category, index) => (
+          <div key={category.title} className={index === 1 ? "lg:mt-12" : undefined}>
+            <CategoryCard category={category} />
+          </div>
+        ))}
+      </div>
+    </Reveal>
   );
 }
 
@@ -41,7 +40,7 @@ function CategoryCard({ category }: { category: CategoryCardData }) {
   return (
     <Link
       href={category.link}
-      className="group relative flex h-[340px] items-end overflow-hidden rounded-[22px] border border-border/60 shadow-[0_16px_48px_rgba(13,59,77,0.14)] outline-none transition-[border-color,box-shadow,transform] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:border-brand/40 hover:shadow-[0_28px_64px_rgba(33,118,149,0.28)] focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 sm:h-[400px] sm:rounded-[28px] md:h-[520px] md:rounded-[32px]"
+      className="group relative flex min-h-[300px] aspect-[4/5] items-end overflow-hidden rounded-[22px] border border-border/60 shadow-[0_16px_48px_rgba(13,59,77,0.14)] outline-none transition-[border-color,box-shadow,transform] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:border-brand/40 hover:shadow-[0_28px_64px_rgba(33,118,149,0.28)] focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 sm:min-h-[360px] sm:rounded-[28px] md:aspect-[3/4] md:rounded-[32px]"
     >
       <div className="absolute inset-0 z-0">
         <Image

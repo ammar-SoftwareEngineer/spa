@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "title": "Portfolio | S&PA",
+    "description": "Download and explore the S&PA company profile — our capabilities, sectors, and project experience across MEP contracting and facility solutions."
+  },
+  "hero": {
+    "eyebrow": "Company Profile",
+    "title": "Our Portfolio",
+    "description": "Explore S&PA’s company profile for an overview of our services, expertise, and delivery across Egypt."
+  },
+  "content": {
+    "eyebrow": "2026 Profile",
+    "title": "S&PA Company Profile",
+    "description": "A complete look at who we are, what we deliver, and how we support fire protection, MEP, facility management, and ICT projects.",
+    "view": "View PDF",
+    "download": "Download PDF",
+    "hint": "Opens the full company profile PDF in your browser."
+  }
+}

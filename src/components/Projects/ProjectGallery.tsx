@@ -8,6 +8,7 @@ import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
+import Container from "@/components/ui/Container";
 import Reveal from "@/components/ui/Reveal";
 
 type ProjectGalleryProps = {
@@ -27,7 +28,7 @@ export default function ProjectGallery({ images, title }: ProjectGalleryProps) {
 
   return (
     <section className="overflow-x-clip py-14 sm:py-20 md:py-28">
-      <div className="container mx-auto w-full px-4 sm:px-5 md:px-10 lg:px-20">
+      <Container>
         <Reveal className="mb-8 sm:mb-12">
           <h2 className="m-0 text-[1.55rem] text-text-primary sm:text-[1.9rem] md:text-[2.5rem]">
             {title}
@@ -95,7 +96,7 @@ export default function ProjectGallery({ images, title }: ProjectGalleryProps) {
             </Swiper>
           </Reveal>
         ) : null}
-      </div>
+      </Container>
     </section>
   );
 }

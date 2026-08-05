@@ -1,6 +1,10 @@
+/**
+ * PageHero — هيرو صفحات داخلية (صورة خلفية + عنوان + breadcrumb)
+ */
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import Container from "@/components/ui/Container";
 import { getSiteData } from "@/lib/api/site";
 
 type PageHeroProps = {
@@ -37,7 +41,7 @@ export default async function PageHero({
       <div className="absolute inset-0 z-[1] bg-gradient-to-r from-[#061018]/92 via-[#0d3b4d]/78 to-[#0d3b4d]/45 rtl:bg-gradient-to-l" />
       <div className="absolute inset-0 z-[1] bg-gradient-to-t from-[#061018]/70 via-transparent to-[#061018]/35" />
 
-      <div className="container relative z-[2] mx-auto w-full px-4 sm:px-5 md:px-10 lg:px-20">
+      <Container className="relative z-[2]">
         <nav className="mb-4 flex flex-wrap items-center gap-2 text-[0.8rem] text-white/65 sm:mb-6 sm:text-[0.85rem]">
           <Link href="/" className="transition-colors hover:text-brand">
             {t("home")}
@@ -53,7 +57,7 @@ export default async function PageHero({
             {description}
           </p>
         ) : null}
-      </div>
+      </Container>
     </section>
   );
 }

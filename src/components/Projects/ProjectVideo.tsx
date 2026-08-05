@@ -1,3 +1,4 @@
+import Container from "@/components/ui/Container";
 import Reveal from "@/components/ui/Reveal";
 
 type ProjectVideoProps = {
@@ -41,7 +42,7 @@ export default function ProjectVideo({ url, title, iframeTitle }: ProjectVideoPr
 
   return (
     <section className="overflow-x-clip py-14 sm:py-20 md:py-28">
-      <div className="container mx-auto w-full px-4 sm:px-5 md:px-10 lg:px-20">
+      <Container>
         <Reveal>
           <div className="mb-8 sm:mb-10 md:mb-12">
             <h2 className="m-0 text-[1.55rem] leading-[1.25] text-text-primary sm:text-[2rem] md:text-[2.6rem]">
@@ -70,7 +71,7 @@ export default function ProjectVideo({ url, title, iframeTitle }: ProjectVideoPr
             </div>
           </div>
         </Reveal>
-      </div>
+      </Container>
     </section>
   );
 }

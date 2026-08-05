@@ -15,7 +15,6 @@ export default async function MissionSection() {
         title={t("mission.title")}
         text={t("mission.text")}
         reverse
-        badgeIcon="Target"
       />
     </Section>
   );

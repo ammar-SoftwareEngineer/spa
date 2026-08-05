@@ -6,7 +6,6 @@ import ProjectDetailView from "@/components/Projects/ProjectDetailView";
 import { getCategoryBySlug, getCategorySlugs } from "@/lib/api/categories";
 import { getProjectBySlug, getProjectSlugs } from "@/lib/api/projects";
 
-export const dynamic = "force-dynamic";
 
 export async function generateStaticParams() {
   const [categories, projects] = await Promise.all([

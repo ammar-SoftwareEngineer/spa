@@ -1,3 +1,7 @@
+/**
+ * ProjectFilters — شريط فلترة المشاريع (نطاق / قطاع / ترتيب / بحث)
+ * بياخد object واحد filters بدل props كتير
+ */
 "use client";
 
 import { useTranslations } from "next-intl";
@@ -5,9 +9,7 @@ import { Search, X } from "lucide-react";
 import type { CategoryItem, SectorItem } from "@/types";
 import type { SortOption } from "@/components/Projects/types";
 
-type ProjectFiltersProps = {
-  categories: CategoryItem[];
-  sectors: SectorItem[];
+export type ProjectFiltersState = {
   scope: string;
   sector: string;
   sort: SortOption;
@@ -15,11 +17,17 @@ type ProjectFiltersProps = {
   resultCount: number;
   showResults: boolean;
   isDirty: boolean;
-  onScopeChange: (value: string) => void;
-  onSectorChange: (value: string) => void;
-  onSortChange: (value: SortOption) => void;
-  onQueryChange: (value: string) => void;
-  onClear: () => void;
+  setScope: (value: string) => void;
+  setSector: (value: string) => void;
+  setSort: (value: SortOption) => void;
+  setQuery: (value: string) => void;
+  clearFilters: () => void;
+};
+
+type ProjectFiltersProps = {
+  categories: CategoryItem[];
+  sectors: SectorItem[];
+  filters: ProjectFiltersState;
 };
 
 const inputClass =
@@ -28,18 +36,7 @@ const inputClass =
 export default function ProjectFilters({
   categories,
   sectors,
-  scope,
-  sector,
-  sort,
-  query,
-  resultCount,
-  showResults,
-  isDirty,
-  onScopeChange,
-  onSectorChange,
-  onSortChange,
-  onQueryChange,
-  onClear,
+  filters,
 }: ProjectFiltersProps) {
   const t = useTranslations("projects");
   const tHome = useTranslations("home.projects");
@@ -48,15 +45,14 @@ export default function ProjectFilters({
   return (
     <div className="rounded-[18px] border border-border/70 bg-bg-secondary/60 p-3 shadow-[var(--card-shadow)] sm:rounded-[24px] sm:p-4 md:p-5">
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 xl:grid-cols-4">
-        {/* Scope of Works */}
         <label className="flex flex-col gap-1.5 sm:gap-2">
           <span className="text-[0.72rem] font-bold uppercase tracking-[0.1em] text-text-muted sm:text-[0.78rem]">
             {t("filters.scope")}
           </span>
           <div className="relative">
             <select
-              value={scope}
-              onChange={(e) => onScopeChange(e.target.value)}
+              value={filters.scope}
+              onChange={(e) => filters.setScope(e.target.value)}
               className={inputClass}
             >
               <option value="">{t("filters.scopeAll")}</option>
@@ -72,15 +68,14 @@ export default function ProjectFilters({
           </div>
         </label>
 
-        {/* Sector */}
         <label className="flex flex-col gap-1.5 sm:gap-2">
           <span className="text-[0.72rem] font-bold uppercase tracking-[0.1em] text-text-muted sm:text-[0.78rem]">
             {t("filters.sector")}
           </span>
           <div className="relative">
             <select
-              value={sector}
-              onChange={(e) => onSectorChange(e.target.value)}
+              value={filters.sector}
+              onChange={(e) => filters.setSector(e.target.value)}
               className={inputClass}
             >
               <option value="">{t("filters.sectorAll")}</option>
@@ -96,15 +91,14 @@ export default function ProjectFilters({
           </div>
         </label>
 
-        {/* Sort */}
         <label className="flex flex-col gap-1.5 sm:gap-2">
           <span className="text-[0.72rem] font-bold uppercase tracking-[0.1em] text-text-muted sm:text-[0.78rem]">
             {t("filters.sort")}
           </span>
           <div className="relative">
             <select
-              value={sort}
-              onChange={(e) => onSortChange(e.target.value as SortOption)}
+              value={filters.sort}
+              onChange={(e) => filters.setSort(e.target.value as SortOption)}
               className={inputClass}
             >
               <option value="recommended">{t("filters.sortRecommended")}</option>
@@ -119,7 +113,6 @@ export default function ProjectFilters({
           </div>
         </label>
 
-        {/* Search */}
         <label className="flex flex-col gap-1.5 sm:gap-2">
           <span className="text-[0.72rem] font-bold uppercase tracking-[0.1em] text-text-muted sm:text-[0.78rem]">
             {t("filters.search")}
@@ -131,8 +124,8 @@ export default function ProjectFilters({
             />
             <input
               type="search"
-              value={query}
-              onChange={(e) => onQueryChange(e.target.value)}
+              value={filters.query}
+              onChange={(e) => filters.setQuery(e.target.value)}
               placeholder={t("filters.searchPlaceholder")}
               className={`${inputClass} ps-10`}
             />
@@ -140,15 +133,15 @@ export default function ProjectFilters({
         </label>
       </div>
 
-      {showResults ? (
+      {filters.showResults ? (
         <div className="mt-3 flex flex-wrap items-center justify-between gap-2 border-t border-border/60 pt-3 sm:mt-4 sm:pt-4">
           <p className="m-0 text-[0.85rem] text-text-secondary sm:text-[0.9rem]">
-            {t("filters.results", { count: resultCount })}
+            {t("filters.results", { count: filters.resultCount })}
           </p>
-          {isDirty ? (
+          {filters.isDirty ? (
             <button
               type="button"
-              onClick={onClear}
+              onClick={filters.clearFilters}
               className="inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-[0.8rem] font-semibold text-brand transition-colors hover:bg-brand/10 sm:text-[0.85rem]"
             >
               <X size={14} />

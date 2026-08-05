@@ -14,8 +14,6 @@ export default async function VisionSection() {
         eyebrow={t("vision.eyebrow")}
         title={t("vision.title")}
         text={t("vision.text")}
-      
-        badgeIcon="Eye"
       />
     </Section>
   );

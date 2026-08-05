@@ -8,6 +8,7 @@ type ButtonProps = {
   href?: string;
   type?: "button" | "submit";
   rtl?: boolean;
+  disabled?: boolean;
 };
 
 export function Button({
@@ -17,6 +18,7 @@ export function Button({
   href,
   type = "button",
   rtl = false,
+  disabled = false,
 }: ButtonProps) {
   const classes = `btn-skew ${size === "lg" ? "btn-skew-lg" : ""} ${className}`.trim();
   const Arrow = rtl ? ArrowLeft : ArrowRight;
@@ -37,7 +39,7 @@ export function Button({
   }
 
   return (
-    <button type={type} className={classes}>
+    <button type={type} className={classes} disabled={disabled}>
       {content}
     </button>
   );

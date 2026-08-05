@@ -21,6 +21,7 @@
         { "key": "spaProducts", "href": "/products/spa" }
       ]
     },
+    { "key": "portfolio", "href": "/portfolio" },
     { "key": "partners", "href": "/partners" },
     { "key": "contact", "href": "/contact" }
   ],
@@ -30,6 +31,7 @@
     { "key": "services", "href": "/services" },
     { "key": "projects", "href": "/projects" },
     { "key": "products", "href": "/products" },
+    { "key": "portfolio", "href": "/portfolio" },
     { "key": "partners", "href": "/partners" },
     { "key": "contact", "href": "/contact" }
   ]

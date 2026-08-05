@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import ServicesPageView from "@/components/Services";
 
-export const dynamic = "force-dynamic";
 
 export async function generateMetadata({
   params,

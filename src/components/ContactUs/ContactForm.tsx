@@ -1,8 +1,14 @@
+/**
+ * ContactForm — فورم صفحة اتصل بنا
+ * بيبعت البيانات لـ submitContact (جاهز للباكند)
+ */
 "use client";
 
+import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import Reveal from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
+import { submitContact } from "@/lib/api/forms";
 
 const fieldClass =
   "w-full rounded-[14px] border border-border bg-bg-secondary/60 px-5 py-3.5 text-[0.95rem] text-text-primary outline-none transition-all duration-300 placeholder:text-text-muted focus:border-brand focus:bg-bg-primary focus:shadow-[0_0_0_3px_rgba(33,118,149,0.12)]";
@@ -11,13 +17,34 @@ export default function ContactForm() {
   const t = useTranslations("contact.form");
   const locale = useLocale();
   const isRtl = locale === "ar";
+  const [status, setStatus] = useState<"idle" | "loading" | "done" | "error">("idle");
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    setStatus("loading");
+    try {
+      await submitContact({
+        name: String(data.get("name") ?? ""),
+        email: String(data.get("email") ?? ""),
+        phone: String(data.get("phone") ?? ""),
+        subject: String(data.get("subject") ?? ""),
+        message: String(data.get("message") ?? ""),
+      });
+      setStatus("done");
+      form.reset();
+    } catch {
+      setStatus("error");
+    }
+  }
 
   return (
     <Reveal delay={0.1} className="h-full">
       <form
         className="relative flex h-full flex-col overflow-hidden rounded-[28px] border border-border/70 bg-bg-primary p-6 shadow-[0_16px_48px_rgba(13,59,77,0.1)] md:p-8 lg:p-10"
-        action="#"
-        method="post"
+        onSubmit={handleSubmit}
       >
         <div className="pointer-events-none absolute -end-20 -top-20 h-48 w-48 rounded-full bg-brand/10 blur-3xl" />
 
@@ -90,10 +117,16 @@ export default function ContactForm() {
           </label>
         </div>
 
-        <div className="relative z-[1] mt-8">
-          <Button type="submit" size="lg" rtl={isRtl}>
+        <div className="relative z-[1] mt-8 flex flex-col gap-3">
+          <Button type="submit" size="lg" rtl={isRtl} disabled={status === "loading"}>
             {t("submit")}
           </Button>
+          {status === "done" ? (
+            <p className="m-0 text-[0.9rem] text-brand">✓</p>
+          ) : null}
+          {status === "error" ? (
+            <p className="m-0 text-[0.9rem] text-red-500">Error</p>
+          ) : null}
         </div>
       </form>
     </Reveal>
