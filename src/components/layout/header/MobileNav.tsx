@@ -4,7 +4,7 @@
 "use client";
 
 import { ChevronDown } from "lucide-react";
-import { Link } from "@/i18n/navigation";
+import NavLink from "@/components/ui/NavLink";
 import type { NavItem } from "@/types";
 
 type MobileNavProps = {
@@ -41,13 +41,13 @@ export default function MobileNav({
           if (!hasChildren) {
             return (
               <li key={item.key}>
-                <Link
-                  href={item.href}
+                <NavLink
+                  item={item}
                   className="text-[1.8rem] font-bold text-text-primary transition-colors hover:text-brand ltr:font-[family-name:var(--font-bebas-neue)] ltr:tracking-wider rtl:font-[family-name:var(--font-cairo)]"
                   onClick={onClose}
                 >
                   {label(item.key)}
-                </Link>
+                </NavLink>
               </li>
             );
           }
@@ -71,13 +71,13 @@ export default function MobileNav({
                 <ul className="flex list-none flex-col items-center gap-1">
                   {item.children!.map((child) => (
                     <li key={child.key}>
-                      <Link
-                        href={child.href}
+                      <NavLink
+                        item={child}
                         className="relative block py-2 text-[1.05rem] text-text-secondary transition-all after:absolute after:bottom-0 after:start-0 after:h-0.5 after:w-full after:origin-end after:scale-x-0 after:bg-brand after:transition-transform after:duration-300 hover:text-brand hover:after:origin-start hover:after:scale-x-100"
                         onClick={onClose}
                       >
                         {label(child.key)}
-                      </Link>
+                      </NavLink>
                     </li>
                   ))}
                 </ul>

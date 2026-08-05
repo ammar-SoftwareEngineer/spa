@@ -1,7 +1,7 @@
 /**
  * FooterLinks — quick links column.
  */
-import { Link } from "@/i18n/navigation";
+import NavLink from "@/components/ui/NavLink";
 import type { NavItem } from "@/types";
 
 type FooterLinksProps = {
@@ -19,12 +19,12 @@ export default function FooterLinks({ title, links, label }: FooterLinksProps) {
       <ul className="flex list-none flex-col gap-3">
         {links.map((link) => (
           <li key={link.key}>
-            <Link
-              href={link.href}
+            <NavLink
+              item={link}
               className="inline-block opacity-80 transition-all duration-300 hover:translate-x-1 hover:text-brand hover:opacity-100 rtl:hover:-translate-x-1"
             >
               {label(link.key)}
-            </Link>
+            </NavLink>
           </li>
         ))}
       </ul>

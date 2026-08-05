@@ -4,7 +4,7 @@
 "use client";
 
 import { ChevronDown } from "lucide-react";
-import { Link } from "@/i18n/navigation";
+import NavLink from "@/components/ui/NavLink";
 import type { NavItem } from "@/types";
 
 type DesktopNavProps = {
@@ -39,9 +39,9 @@ export default function DesktopNav({
         if (!hasChildren) {
           return (
             <li key={item.key}>
-              <Link href={item.href} className={`${navLinkBase} ${navLinkIdle}`}>
+              <NavLink item={item} className={`${navLinkBase} ${navLinkIdle}`}>
                 {label(item.key)}
-              </Link>
+              </NavLink>
             </li>
           );
         }
@@ -85,8 +85,8 @@ export default function DesktopNav({
 
                   return (
                     <li key={child.key}>
-                      <Link
-                        href={child.href}
+                      <NavLink
+                        item={child}
                         className={`relative mx-3 block whitespace-nowrap py-2.5 text-[0.9rem] font-medium transition-all after:absolute after:bottom-0 after:start-0 after:h-0.5 after:w-full after:bg-brand after:transition-transform after:duration-300 ${
                           active
                             ? "text-brand after:scale-x-100"
@@ -94,7 +94,7 @@ export default function DesktopNav({
                         }`}
                       >
                         {label(child.key)}
-                      </Link>
+                      </NavLink>
                     </li>
                   );
                 })}
