@@ -85,7 +85,8 @@
   "partners": {
     "title": "Our Partners",
     "header": "Your Success, Our Reputation",
-    "description": "We work with globally recognized brands to deliver reliable products and lasting project results."
+    "description": "We work with globally recognized brands to deliver reliable products and lasting project results.",
+    "viewAll": "View All Partners"
   },
   "teamBanner": {
     "title": "Our Team",
