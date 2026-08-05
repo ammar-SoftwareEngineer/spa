@@ -9,13 +9,6 @@ npm install
 npm run dev
 ```
 
-## دليل الدراسة
-
-اقرأ الشرح الكامل هنا:
-
-- [docs/SPA-CODE-GUIDE.md](./docs/SPA-CODE-GUIDE.md)
-- [docs/SPA-CODE-GUIDE.pdf](./docs/SPA-CODE-GUIDE.pdf)
-
 ## ربط الباكند لاحقاً
 
 أضف في `.env.local`:
