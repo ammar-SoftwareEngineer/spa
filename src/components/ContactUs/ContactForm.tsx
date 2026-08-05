@@ -1,6 +1,6 @@
 /**
- * ContactForm — فورم صفحة اتصل بنا
- * بيبعت البيانات لـ submitContact (جاهز للباكند)
+ * ContactForm — contact page form.
+ * Submits via submitContact (backend-ready).
  */
 "use client";
 

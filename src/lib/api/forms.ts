@@ -1,7 +1,7 @@
 /**
- * Forms API — إرسال فورمز الموقع للباكند
- * حالياً: لو مفيش API بيرجع نجاح وهمي عشان الـ UI يشتغل
- * بعد الباكند: حط NEXT_PUBLIC_API_URL وخلاص
+ * Forms API — submit site forms to the backend.
+ * Without an API URL, returns a stub success so the UI still works.
+ * After backend is ready: set NEXT_PUBLIC_API_URL and you're done.
  */
 
 import { apiPost } from "@/lib/api/client";

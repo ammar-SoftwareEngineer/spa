@@ -1,5 +1,5 @@
 /**
- * DesktopNav — قائمة التنقل للشاشات الكبيرة (مع dropdown)
+ * DesktopNav — desktop navigation with dropdowns.
  */
 "use client";
 

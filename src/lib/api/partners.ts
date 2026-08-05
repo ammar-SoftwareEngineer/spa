@@ -1,5 +1,5 @@
 /**
- * Partners API
+ * Partners API.
  */
 import partnersData from "@/lib/data/partners.json";
 import { apiGet, hasRemoteApi } from "@/lib/api/client";

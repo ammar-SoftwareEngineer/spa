@@ -1,6 +1,6 @@
 /**
- * FooterNewsletter — فورم الاشتراك في النشرة
- * جاهز للربط مع submitNewsletter في lib/api/forms
+ * FooterNewsletter — newsletter signup form.
+ * Wired to submitNewsletter in lib/api/forms.
  */
 "use client";
 

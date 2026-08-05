@@ -1,7 +1,7 @@
 /**
- * Products API
- * دلوقتي: من JSON محلي
- * لاحقاً: غيّر جوه getProducts فقط — الـ UI مش هيتأثر
+ * Products API.
+ * Now: local JSON.
+ * Later: change only getProducts — the UI stays the same.
  */
 import productsData from "@/lib/data/products.json";
 import { apiGet, hasRemoteApi } from "@/lib/api/client";

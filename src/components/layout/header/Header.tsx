@@ -1,6 +1,6 @@
 /**
- * Header — الشريط العلوي الثابت (لوجو + تنقل + ثيم/لغة)
- * المنطق هنا، والعرض مقسوم على DesktopNav / MobileNav / HeaderActions
+ * Header — fixed top bar (logo + nav + theme/locale).
+ * Logic lives here; UI is split into DesktopNav / MobileNav / HeaderActions.
  */
 "use client";
 
@@ -36,7 +36,7 @@ export default function Header({ navItems, logoSrc }: HeaderProps) {
     setTheme(getTheme());
   }, []);
 
-  // زجاج الشريط بعد السكرول
+  // Glass header style after scroll
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 50);
     onScroll();
@@ -44,7 +44,7 @@ export default function Header({ navItems, logoSrc }: HeaderProps) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // منع سكرول الصفحة لما المنيو مفتوحة
+  // Lock body scroll while the mobile menu is open
   useEffect(() => {
     document.body.style.overflow = isMobileMenuOpen ? "hidden" : "";
     return () => {
@@ -52,7 +52,7 @@ export default function Header({ navItems, logoSrc }: HeaderProps) {
     };
   }, [isMobileMenuOpen]);
 
-  // إغلاق المنيوهات عند تغيير الصفحة
+  // Close menus on route change
   useEffect(() => {
     setIsMobileMenuOpen(false);
     setOpenDesktopDropdown(null);

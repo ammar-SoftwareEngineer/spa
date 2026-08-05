@@ -1,5 +1,5 @@
 /**
- * Footer — أسفل كل الصفحات (براند + روابط + تواصل + نشرة)
+ * Footer — site footer (brand + links + contact + newsletter).
  */
 import { getTranslations } from "next-intl/server";
 import Container from "@/components/ui/Container";

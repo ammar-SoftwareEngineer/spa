@@ -1,5 +1,5 @@
 /**
- * FooterLinks — روابط سريعة في الفوتر
+ * FooterLinks — quick links column.
  */
 import { Link } from "@/i18n/navigation";
 import type { NavItem } from "@/types";

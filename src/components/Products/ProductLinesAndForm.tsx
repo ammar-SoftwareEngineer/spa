@@ -1,6 +1,6 @@
 /**
- * ProductLinesAndForm — جاليري خطوط المنتج + فورم الاستفسار
- * Client Component لأن اختيار الخط يحدّث الفورم ويعمل scroll
+ * ProductLinesAndForm — product line gallery + inquiry form.
+ * Client Component: selecting a line updates the form and scrolls to it.
  */
 "use client";
 
@@ -37,7 +37,7 @@ export default function ProductLinesAndForm({
 
   function selectLine(line: LineView) {
     setSelectedTitle(line.title);
-    // نزل للفورم بعد اختيار المنتج
+    // Scroll to the inquiry form after selecting a line
     window.requestAnimationFrame(() => {
       document.getElementById("product-inquiry")?.scrollIntoView({
         behavior: "smooth",

@@ -1,5 +1,5 @@
 /**
- * InquiryFields — حقول فورم استفسار المنتج (react-hook-form)
+ * InquiryFields — product inquiry form fields (react-hook-form).
  */
 "use client";
 

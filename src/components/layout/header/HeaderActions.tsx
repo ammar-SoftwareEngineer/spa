@@ -1,5 +1,5 @@
 /**
- * HeaderActions — أزرار الثيم واللغة وقائمة الموبايل
+ * HeaderActions — theme, locale, and mobile menu buttons.
  */
 "use client";
 

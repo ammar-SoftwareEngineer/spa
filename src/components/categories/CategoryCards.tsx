@@ -1,5 +1,5 @@
 /**
- * CategoryCards — شبكة كروت التصنيفات
+ * CategoryCards — category card grid.
  */
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";

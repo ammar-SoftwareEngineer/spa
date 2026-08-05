@@ -1,6 +1,6 @@
 /**
- * robots.txt — يقول لمحركات البحث إيه يتفهرس
- * بتتولد تلقائياً على /robots.txt
+ * robots.txt — crawl rules for search engines.
+ * Generated at /robots.txt.
  */
 import type { MetadataRoute } from "next";
 import { getBaseUrl } from "@/lib/utils";

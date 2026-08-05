@@ -1,6 +1,6 @@
 /**
- * ProjectFilters — شريط فلترة المشاريع (نطاق / قطاع / ترتيب / بحث)
- * بياخد object واحد filters بدل props كتير
+ * ProjectFilters — project filter bar (scope / sector / sort / search).
+ * Takes one filters object instead of many separate props.
  */
 "use client";
 

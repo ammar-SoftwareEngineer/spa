@@ -1,5 +1,5 @@
 /**
- * الصفحة الرئيسية
+ * Home page.
  */
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";

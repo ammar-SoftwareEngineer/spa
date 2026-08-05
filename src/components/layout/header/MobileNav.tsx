@@ -1,5 +1,5 @@
 /**
- * MobileNav — قائمة كاملة الشاشة للموبايل
+ * MobileNav — full-screen mobile navigation.
  */
 "use client";
 

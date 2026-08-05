@@ -1,5 +1,5 @@
 /**
- * Site API — بيانات عامة (لوجو، تواصل، صور)
+ * Site API — shared site data (logo, contact, media).
  */
 import siteData from "@/lib/data/site.json";
 import { apiGet, hasRemoteApi } from "@/lib/api/client";

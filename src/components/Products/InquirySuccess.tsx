@@ -1,5 +1,5 @@
 /**
- * InquirySuccess — رسالة نجاح بعد إرسال استفسار المنتج
+ * InquirySuccess — success state after submitting a product inquiry.
  */
 "use client";
 

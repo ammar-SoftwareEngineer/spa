@@ -1,5 +1,5 @@
 /**
- * ProjectDetailView — صفحة تفاصيل مشروع واحد
+ * ProjectDetailView — single project detail page.
  */
 import { getTranslations } from "next-intl/server";
 import ProjectHero from "@/components/Projects/ProjectHero";

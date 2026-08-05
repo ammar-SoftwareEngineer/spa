@@ -1,5 +1,5 @@
 /**
- * FooterBrand — لوجو + نبذة + سوشيال
+ * FooterBrand — logo, about text, and social links.
  */
 import Image from "next/image";
 import type { SiteData } from "@/types";

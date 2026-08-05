@@ -1,5 +1,5 @@
 /**
- * ProjectHero — هيرو صفحة تفاصيل المشروع (صورة + عنوان + tags)
+ * ProjectHero — project detail hero (image + title + tags).
  */
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";

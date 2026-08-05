@@ -1,6 +1,6 @@
 /**
- * ProjectsExplorer — فلتر + شبكة مشاريع
- * الصفحة الرئيسية تعرض idleContent لحد ما المستخدم يفلتر
+ * ProjectsExplorer — filters + project grid.
+ * On the main page, shows idleContent until the user starts filtering.
  */
 "use client";
 

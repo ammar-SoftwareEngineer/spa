@@ -1,6 +1,6 @@
 /**
- * ProjectTextBlock — بلوك صورة + نص (overview / scope)
- * نفس الفكرة زي MediaContentBlock بس بتصميم تفاصيل المشروع
+ * ProjectTextBlock — image + text block (overview / scope).
+ * Same idea as MediaContentBlock, styled for project details.
  */
 import Image from "next/image";
 import Container from "@/components/ui/Container";

@@ -1,6 +1,6 @@
 /**
- * ProductDetailContent — محتوى صفحة تفاصيل المنتج
- * يجمع overview (server) مع الجاليري والفورم (client)
+ * ProductDetailContent — product detail page body.
+ * Combines overview (server) with gallery + form (client).
  */
 import type { ReactNode } from "react";
 import { getTranslations } from "next-intl/server";

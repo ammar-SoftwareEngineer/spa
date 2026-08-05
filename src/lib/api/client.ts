@@ -1,28 +1,28 @@
 /**
- * API Client — نقطة واحدة للتعامل مع الباكند
+ * API Client — single place to talk to the backend.
  *
- * لو في NEXT_PUBLIC_API_URL → يجيب البيانات من السيرفر
- * لو مفيش → تستخدم ملفات JSON المحلية (الوضع الحالي)
+ * If NEXT_PUBLIC_API_URL is set → fetch from the server.
+ * Otherwise → use local JSON files (current setup).
  *
- * مثال بعد ما الباكند يجهز:
+ * Example after the backend is ready:
  *   const products = await apiGet<ProductItem[]>("/products");
  */
 
 import { getBaseUrl } from "@/lib/utils";
 
-/** عنوان الـ API من env — فاضي = استخدم JSON المحلي */
+/** API base URL from env — empty means use local JSON. */
 export function getApiBaseUrl() {
   return process.env.NEXT_PUBLIC_API_URL?.replace(/\/$/, "") ?? "";
 }
 
-/** هل الموقع مربوط بباكند حقيقي؟ */
+/** Whether a real backend API URL is configured. */
 export function hasRemoteApi() {
   return Boolean(getApiBaseUrl());
 }
 
 /**
- * GET بسيط من الـ API
- * بيرمي error لو الرد مش OK عشان الصفحة تعرف تتعامل
+ * Simple API GET.
+ * Throws if the response is not OK so callers can handle errors.
  */
 export async function apiGet<T>(path: string): Promise<T> {
   const base = getApiBaseUrl();
@@ -32,7 +32,7 @@ export async function apiGet<T>(path: string): Promise<T> {
 
   const url = `${base}${path.startsWith("/") ? path : `/${path}`}`;
   const res = await fetch(url, {
-    // next.js caching — غيّره حسب احتياجك
+    // Next.js caching — adjust revalidate as needed
     next: { revalidate: 60 },
   });
 
@@ -44,7 +44,7 @@ export async function apiGet<T>(path: string): Promise<T> {
 }
 
 /**
- * POST بسيط (فورمز التواصل / الاستفسار / النشرة)
+ * Simple API POST (contact / inquiry / newsletter forms).
  */
 export async function apiPost<TBody extends object, TResult = unknown>(
   path: string,
@@ -52,7 +52,7 @@ export async function apiPost<TBody extends object, TResult = unknown>(
 ): Promise<TResult> {
   const base = getApiBaseUrl();
 
-  // بدون باكند: نعمل simulate نجاح عشان الواجهة تشتغل في التطوير
+  // No backend yet: simulate success so the UI works in development
   if (!base) {
     console.info("[apiPost stub]", path, body);
     return { ok: true } as TResult;
@@ -72,7 +72,7 @@ export async function apiPost<TBody extends object, TResult = unknown>(
   return res.json() as Promise<TResult>;
 }
 
-/** رابط الموقع للـ SEO (sitemap / metadata) */
+/** Public site URL for SEO (sitemap / metadata). */
 export function getSiteUrl() {
   return getBaseUrl();
 }

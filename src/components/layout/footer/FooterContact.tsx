@@ -1,5 +1,5 @@
 /**
- * FooterContact — بيانات التواصل في الفوتر
+ * FooterContact — contact details column.
  */
 import { Phone, Mail, MapPin, type LucideIcon } from "lucide-react";
 import type { SiteData } from "@/types";

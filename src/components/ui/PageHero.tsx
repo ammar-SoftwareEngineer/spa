@@ -1,5 +1,5 @@
 /**
- * PageHero — هيرو صفحات داخلية (صورة خلفية + عنوان + breadcrumb)
+ * PageHero — inner-page hero (background image + title + breadcrumb).
  */
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";

@@ -1,6 +1,6 @@
 /**
- * ProductInquiryForm — فورم طلب استفسار عن منتج
- * يحدّث المنتج المختار تلقائياً عند اختيار line من الجاليري
+ * ProductInquiryForm — product inquiry form.
+ * Keeps the selected product in sync when a gallery line is chosen.
  */
 "use client";
 
@@ -42,7 +42,7 @@ export default function ProductInquiryForm({ productTitle }: ProductInquiryFormP
     mode: "onBlur",
   });
 
-  // لما المستخدم يختار منتج تاني من الجاليري
+  // Sync fields when the user picks another line from the gallery
   useEffect(() => {
     setSubmitted(false);
     setValue("product", productTitle);

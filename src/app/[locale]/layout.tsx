@@ -1,5 +1,5 @@
 /**
- * Layout لكل اللغات — خطوط + هيدر/فوتر + metadata أساسي للـ SEO
+ * Locale layout — fonts, header/footer, and base SEO metadata.
  */
 import type { Metadata } from "next";
 import { Cairo, Bebas_Neue, Open_Sans } from "next/font/google";
@@ -105,7 +105,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       suppressHydrationWarning
     >
       <head>
-        {/* يمنع وميض الثيم الغلط قبل تحميل React */}
+        {/* Prevent wrong theme flash before React hydrates */}
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var s=localStorage.getItem("theme");var d=s?s==="dark":matchMedia("(prefers-color-scheme: dark)").matches;document.documentElement.classList.toggle("dark",d)}catch(e){}})()`,

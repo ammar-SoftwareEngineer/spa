@@ -1,5 +1,5 @@
 /**
- * MediaContentBlock — بلوك صورة + نص جنب بعض (About / Mission / Vision)
+ * MediaContentBlock — side-by-side image + text (About / Mission / Vision).
  */
 import Image from "next/image";
 import Reveal from "@/components/ui/Reveal";

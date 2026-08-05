@@ -1,6 +1,6 @@
 /**
- * ProductOverview — قسم نظرة عامة على فئة المنتج (صورة + مميزات)
- * Server Component — مفيش تفاعل هنا
+ * ProductOverview — product category overview (image + features).
+ * Server Component — no interactivity here.
  */
 import Image from "next/image";
 import { CheckCircle2, ExternalLink } from "lucide-react";

@@ -1,6 +1,6 @@
 /**
- * Container — عرض موحّد لكل أقسام الصفحة
- * استخدمه بدل تكرار container / max-w / padding في كل سكشن
+ * Container — shared page width wrapper.
+ * Prefer this over repeating container / max-w / padding in every section.
  */
 type ContainerProps = React.ComponentPropsWithoutRef<"div">;
 

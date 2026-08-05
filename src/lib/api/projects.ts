@@ -1,5 +1,5 @@
 /**
- * Projects API — JSON محلي الآن، باكند لاحقاً عبر NEXT_PUBLIC_API_URL
+ * Projects API — local JSON now; backend later via NEXT_PUBLIC_API_URL.
  */
 import projectsData from "@/lib/data/projects.json";
 import { apiGet, hasRemoteApi } from "@/lib/api/client";
